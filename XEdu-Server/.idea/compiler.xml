@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="service-api" />
+        <module name="framework-common" />
+        <module name="service-manage-cms" />
+        <module name="framework-model" />
+        <module name="framework-utils" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="framework-common" target="1.8" />
+      <module name="framework-model" target="1.8" />
+      <module name="framework-parent" target="1.8" />
+      <module name="framework-utils" target="1.8" />
+      <module name="service-api" target="1.8" />
+      <module name="service-manage-cms" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="framework-common" options="-parameters" />
+      <module name="framework-model" options="-parameters" />
+      <module name="framework-utils" options="-parameters" />
+      <module name="service-api" options="-parameters" />
+      <module name="service-manage-cms" options="-parameters" />
+    </option>
+  </component>
+</project>
