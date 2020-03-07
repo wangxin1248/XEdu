@@ -10,7 +10,7 @@ import org.springframework.context.annotation.ComponentScan;
  * @Description: 微服务启动入口类
  * @Date:Created in 2020/3/1 20:03.
  */
-@SpringBootApplication
+@SpringBootApplication//声明为StringBootApplication
 @EntityScan("com.xedu.framework.domain.cms")//扫描实体类
 @ComponentScan(basePackages={"com.xedu.api"})//扫描接口
 @ComponentScan(basePackages={"com.xedu.manage_cms"})//扫描本项目下的所有类
