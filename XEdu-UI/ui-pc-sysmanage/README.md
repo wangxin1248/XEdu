@@ -1,6 +1,6 @@
-# xc-ui-pc-sysmanage
+# ui-pc-sysmanage
 
-> xc-ui-pc-sysmanage
+> ui-pc-sysmanage
 
 ## Build Setup
 
