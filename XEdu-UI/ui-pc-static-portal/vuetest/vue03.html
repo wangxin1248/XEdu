@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:v-on="http://www.w3.org/1999/xhtml" xmlns:v-bind="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>vue.js v-if v-for</title>
+</head>
+<body>
+<!--使用div控制整个body区域-->
+<div id="app">
+    <ul>
+        <li v-for="(item,index) in nums":key="index" v-if="index%2==0">{{index}}:{{item}}</li>
+        <li v-for="(value,key) in user">{{key}}:{{value}}</li>
+    </ul>
+</div>
+</body>
+<script src="vue.min.js"></script>
+<script>
+    // 实例化vue对象
+    // VM作为viewModel
+    var VM = new Vue({
+        el:"#app",//表示当前vue接管的app的div区域
+        data:{
+            nums:[1,2,3,4,5],
+            user:{"name":"wangxin","age":10},
+        },
+    });
+</script>
+</html>

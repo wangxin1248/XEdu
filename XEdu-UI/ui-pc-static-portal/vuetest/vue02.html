@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:v-on="http://www.w3.org/1999/xhtml" xmlns:v-bind="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>vue.js常用指令</title>
+</head>
+<body>
+<!--使用div控制整个body区域-->
+<div id="app">
+    <!--创建view显示部分-->
+    <a v-bind:href="url">
+        <span v-text="name"></span>
+    </a>
+    <input type="text" v-model="num1">+
+    <input type="text" v-model="num2">=
+    <span v-text="result"></span>
+    <button v-on:click="change">计算</button>
+</div>
+</body>
+<script src="vue.min.js"></script>
+<script>
+    // 实例化vue对象
+    // VM作为viewModel
+    var VM = new Vue({
+        el:"#app",//表示当前vue接管的app的div区域
+        data:{
+            name:'鑫课堂',// 相当于Model
+            num1:0,
+            num2:0,
+            result:0,
+            url:'https://wangxin1248.github.io'
+        },
+        methods:{
+            change:function () {
+                this.result = Number.parseInt(this.num1)+Number.parseInt(this.num2)
+            }
+        }
+    });
+</script>
+</html>

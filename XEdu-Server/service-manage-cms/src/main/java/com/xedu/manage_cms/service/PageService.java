@@ -45,8 +45,10 @@ public class PageService {
         Page<CmsPage> all = cmsPageRepositoty.findAll(pageable);
         // 将查询结果封装到QueryResult中
         QueryResult<CmsPage> result = new QueryResult<>();
+        // 内容
         result.setList(all.getContent());
-        result.setTotal(all.getTotalPages());
+        // 长度
+        result.setTotal(all.getTotalElements());
         // 返回查询响应
         return new QueryResponseResult(CommonCode.SUCCESS,result);
     }

@@ -1,7 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cd6f70ef-b367-4dc1-9ab3-a4972a9c1ce4" name="Default" comment="" />
+    <list default="true" id="cd6f70ef-b367-4dc1-9ab3-a4972a9c1ce4" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../XEdu-Server/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../XEdu-Server/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../XEdu-Server/service-manage-cms/src/main/java/com/xedu/manage_cms/service/PageService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../XEdu-Server/service-manage-cms/src/main/java/com/xedu/manage_cms/service/PageService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../XEdu-Server/service-manage-cms/src/test/java/com/xedu/manage_cms/dao/CmsPageRepositotyTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../XEdu-Server/service-manage-cms/src/test/java/com/xedu/manage_cms/dao/CmsPageRepositotyTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../XEdu-Server/service-manage-cms/target/classes/META-INF/service-manage-cms.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../XEdu-Server/service-manage-cms/target/classes/com/xedu/manage_cms/service/PageService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../XEdu-Server/service-manage-cms/target/classes/com/xedu/manage_cms/service/PageService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../XEdu-Server/service-manage-cms/target/test-classes/META-INF/service-manage-cms.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../XEdu-Server/service-manage-cms/target/test-classes/com/xedu/manage_cms/dao/CmsPageRepositotyTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../XEdu-Server/service-manage-cms/target/test-classes/com/xedu/manage_cms/dao/CmsPageRepositotyTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/asset-logoIco.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/asset-logoIco.png" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -14,6 +25,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -54,6 +66,9 @@
       <dir>F:\eduprojects\xc-edu-snapshotv1.0\xc-ui-pc-static-portal</dir>
     </dirStrings>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
   <component name="JsFlowSettings">
     <service-enabled>true</service-enabled>
     <exe-path />
@@ -61,6 +76,9 @@
     <other-services-enabled>true</other-services-enabled>
   </component>
   <component name="ProjectId" id="1YTF6fSaUPFUgNBc6QNbkJiQO1F" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -72,8 +90,9 @@
     <property name="JavaScriptPreferStrict" value="false" />
     <property name="JavaScriptWeakerCompletionTypeGuess" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/img" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -81,15 +100,16 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path" value="node" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="F:\eduprojects\xc-edu-snapshotv1.0\xc-ui-pc-static-portal" />
-      <recent name="F:\eduprojects\xc-edu-snapshotv1.0\xc-ui-pc-static-portal\js" />
-      <recent name="F:\eduprojects\xc-edu-snapshotv1.0\xc-ui-pc-static-portal\include" />
-      <recent name="F:\eduprojects\xc-edu-snapshotv1.0\xc-ui-pc-static-portal\plugins\webuploader" />
-      <recent name="F:\eduprojects\xc-edu-snapshotv1.0\xc-ui-pc-static-portal\plugins\ckplayer" />
+      <recent name="$PROJECT_DIR$/img" />
+      <recent name="$PROJECT_DIR$/webpacktest01/src" />
+      <recent name="$PROJECT_DIR$/webpacktest01" />
+      <recent name="$PROJECT_DIR$/webpacktest" />
+      <recent name="$PROJECT_DIR$/vuetest" />
     </key>
   </component>
   <component name="RunManager">
@@ -108,6 +128,21 @@
       <envs />
       <method v="2" />
     </configuration>
+    <configuration name="dev" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/webpacktest01/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="dev" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="npm.dev" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -139,6 +174,12 @@
       <workItem from="1528249696513" duration="770000" />
       <workItem from="1582958508786" duration="1794000" />
       <workItem from="1583075108951" duration="166000" />
+      <workItem from="1583638172894" duration="3540000" />
+      <workItem from="1583647661144" duration="441000" />
+      <workItem from="1583651801073" duration="986000" />
+      <workItem from="1583653009396" duration="1236000" />
+      <workItem from="1583656081527" duration="810000" />
+      <workItem from="1583740440801" duration="137000" />
     </task>
     <servers />
   </component>
@@ -155,9 +196,33 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="221" y="89" key="SettingsEditor" timestamp="1582958694696">
+    <state x="320" y="36" key="#HTTP_Proxy" timestamp="1583640066523">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="221" y="89" key="SettingsEditor/0.0.1440.900@0.0.1440.900" timestamp="1582958694696" />
+    <state x="320" y="36" key="#HTTP_Proxy/0.0.1440.900@0.0.1440.900" timestamp="1583640066523" />
+    <state x="395" y="148" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1583656209997">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="395" y="148" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1440.900@0.0.1440.900" timestamp="1583656209997" />
+    <state width="1414" height="232" key="GridCell.Tab.0.bottom" timestamp="1583656987886">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1414" height="232" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1583656987886" />
+    <state width="1414" height="232" key="GridCell.Tab.0.center" timestamp="1583656987885">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1414" height="232" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1583656987885" />
+    <state width="1414" height="232" key="GridCell.Tab.0.left" timestamp="1583656987884">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1414" height="232" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1583656987884" />
+    <state width="1414" height="232" key="GridCell.Tab.0.right" timestamp="1583656987885">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1414" height="232" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1583656987885" />
+    <state x="221" y="3" key="SettingsEditor" timestamp="1583640117536">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="221" y="3" key="SettingsEditor/0.0.1440.900@0.0.1440.900" timestamp="1583640117536" />
   </component>
 </project>

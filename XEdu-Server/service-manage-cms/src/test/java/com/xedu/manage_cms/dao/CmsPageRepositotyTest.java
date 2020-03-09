@@ -1,6 +1,7 @@
 package com.xedu.manage_cms.dao;
 
 import com.xedu.framework.domain.cms.CmsPage;
+import com.xedu.framework.model.response.QueryResult;
 import com.xedu.manage_cms.dao.CmsPageRepositoty;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -38,6 +39,10 @@ public class CmsPageRepositotyTest {
         int size = 10;
         Pageable pageable = PageRequest.of(page,size);
         Page<CmsPage> all = cmsPageRepositoty.findAll(pageable);
+        // 将查询结果封装到QueryResult中
+        QueryResult<CmsPage> result = new QueryResult<>();
+        result.setList(all.getContent());
+        result.setTotal(all.getTotalElements());
         System.out.println(all);
     }
 }
