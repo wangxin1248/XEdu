@@ -1,11 +1,9 @@
 'use strict'
-// Template version: 1.2.4
+// Template version: 1.3.1
 // see http://vuejs-templates.github.io/webpack for documentation.
 
 const path = require('path')
-var proxyConfig = require('./proxyConfig')
-let sysConfig = require('./sysConfig')
-let xcApiUrl = sysConfig.xcApiUrl
+
 module.exports = {
   dev: {
 
@@ -21,7 +19,7 @@ module.exports = {
       },
       // 下配置proxyTable实现跨域访问
       '/api/cms': {
-        target: 'http://192.168.199.107:31001',
+        target: 'http://127.0.0.1:31001',
         pathRewrite: {
           '^/api': ''//实际请求去掉/api
         }

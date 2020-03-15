@@ -27,4 +27,7 @@ public class QueryPageRequest extends RequestData {
     // 页面别名
     @ApiModelProperty("页面别名")
     private String pageAlias;
+    // 页面类型
+    @ApiModelProperty("页面类型")
+    private String pageType;
 }

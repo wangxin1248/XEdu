@@ -1,0 +1,9 @@
+{ 
+    "_id" : ObjectId("5a751fab6abb5044e0d19ea1"), 
+    "_class" : "com.xedu.framework.domain.cms.CmsSite", 
+    "siteName" : "门户主站", 
+    "siteDomain" : "http://localhost", 
+    "sitePort" : "80", 
+    "siteWebPath" : "/", 
+    "siteCreateTime" : ISODate("2018-02-03T02:34:19.113+0000")
+}

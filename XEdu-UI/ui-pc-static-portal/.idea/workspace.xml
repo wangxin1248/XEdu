@@ -2,16 +2,46 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cd6f70ef-b367-4dc1-9ab3-a4972a9c1ce4" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../XEdu-Server/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../XEdu-Server/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../XEdu-Server/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../XEdu-Server/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../XEdu-Server/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../XEdu-Server/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../XEdu-Server/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../XEdu-Server/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../XEdu-Server/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../XEdu-Server/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../XEdu-Server/framework-common/src/main/java/com/xedu/framework/model/response/CommonCode.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../XEdu-Server/framework-common/src/main/java/com/xedu/framework/model/response/CommonCode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../XEdu-Server/framework-common/target/classes/com/xedu/framework/model/response/CommonCode.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../XEdu-Server/framework-common/target/classes/com/xedu/framework/model/response/CommonCode.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../XEdu-Server/framework-model/src/main/java/com/xedu/framework/domain/cms/request/QueryPageRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../XEdu-Server/framework-model/src/main/java/com/xedu/framework/domain/cms/request/QueryPageRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../XEdu-Server/framework-model/target/classes/com/xedu/framework/domain/cms/request/QueryPageRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../XEdu-Server/framework-model/target/classes/com/xedu/framework/domain/cms/request/QueryPageRequest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../XEdu-Server/framework-parent/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../XEdu-Server/framework-parent/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../XEdu-Server/service-api/src/main/java/com/xedu/api/cms/CmsPageControllerApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../XEdu-Server/service-api/src/main/java/com/xedu/api/cms/CmsPageControllerApi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../XEdu-Server/service-api/target/classes/com/xedu/api/cms/CmsPageControllerApi.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../XEdu-Server/service-api/target/classes/com/xedu/api/cms/CmsPageControllerApi.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../XEdu-Server/service-manage-cms/src/main/java/com/xedu/manage_cms/ManageCmsApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../XEdu-Server/service-manage-cms/src/main/java/com/xedu/manage_cms/ManageCmsApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../XEdu-Server/service-manage-cms/src/main/java/com/xedu/manage_cms/controller/CmsPageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../XEdu-Server/service-manage-cms/src/main/java/com/xedu/manage_cms/controller/CmsPageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../XEdu-Server/service-manage-cms/src/main/java/com/xedu/manage_cms/dao/CmsPageRepositoty.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../XEdu-Server/service-manage-cms/src/main/java/com/xedu/manage_cms/dao/CmsPageRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../XEdu-Server/service-manage-cms/src/main/java/com/xedu/manage_cms/service/PageService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../XEdu-Server/service-manage-cms/src/main/java/com/xedu/manage_cms/service/PageService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../XEdu-Server/service-manage-cms/src/test/java/com/xedu/manage_cms/dao/CmsPageRepositotyTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../XEdu-Server/service-manage-cms/src/test/java/com/xedu/manage_cms/dao/CmsPageRepositotyTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../XEdu-Server/service-manage-cms/target/classes/META-INF/service-manage-cms.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../XEdu-Server/service-manage-cms/target/classes/com/xedu/manage_cms/ManageCmsApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../XEdu-Server/service-manage-cms/target/classes/com/xedu/manage_cms/ManageCmsApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../XEdu-Server/service-manage-cms/target/classes/com/xedu/manage_cms/controller/CmsPageController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../XEdu-Server/service-manage-cms/target/classes/com/xedu/manage_cms/controller/CmsPageController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../XEdu-Server/service-manage-cms/target/classes/com/xedu/manage_cms/dao/CmsPageRepositoty.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../XEdu-Server/service-manage-cms/target/classes/com/xedu/manage_cms/service/PageService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../XEdu-Server/service-manage-cms/target/classes/com/xedu/manage_cms/service/PageService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../XEdu-Server/service-manage-cms/target/test-classes/META-INF/service-manage-cms.kotlin_module" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../XEdu-Server/service-manage-cms/target/test-classes/com/xedu/manage_cms/dao/CmsPageRepositotyTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../XEdu-Server/service-manage-cms/target/test-classes/com/xedu/manage_cms/dao/CmsPageRepositotyTest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/asset-logoIco.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/asset-logoIco.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/include/index_banner.html" beforeDir="false" afterPath="$PROJECT_DIR$/include/index_banner.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ui-pc-sysmanage/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../ui-pc-sysmanage/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ui-pc-sysmanage/build/build.js" beforeDir="false" afterPath="$PROJECT_DIR$/../ui-pc-sysmanage/build/build.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ui-pc-sysmanage/build/check-versions.js" beforeDir="false" afterPath="$PROJECT_DIR$/../ui-pc-sysmanage/build/check-versions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ui-pc-sysmanage/build/utils.js" beforeDir="false" afterPath="$PROJECT_DIR$/../ui-pc-sysmanage/build/utils.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ui-pc-sysmanage/build/vue-loader.conf.js" beforeDir="false" afterPath="$PROJECT_DIR$/../ui-pc-sysmanage/build/vue-loader.conf.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ui-pc-sysmanage/build/webpack.dev.conf.js" beforeDir="false" afterPath="$PROJECT_DIR$/../ui-pc-sysmanage/build/webpack.dev.conf.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ui-pc-sysmanage/build/webpack.prod.conf.js" beforeDir="false" afterPath="$PROJECT_DIR$/../ui-pc-sysmanage/build/webpack.prod.conf.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ui-pc-sysmanage/build/webpack.test.conf.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ui-pc-sysmanage/config/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../ui-pc-sysmanage/config/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ui-pc-sysmanage/config/sysConfig.js" beforeDir="false" afterPath="$PROJECT_DIR$/../ui-pc-sysmanage/config/sysConfig.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ui-pc-sysmanage/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../ui-pc-sysmanage/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ui-pc-sysmanage/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../ui-pc-sysmanage/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ui-pc-sysmanage/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../ui-pc-sysmanage/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ui-pc-sysmanage/src/module/cms/api/cms.js" beforeDir="false" afterPath="$PROJECT_DIR$/../ui-pc-sysmanage/src/module/cms/api/cms.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ui-pc-sysmanage/src/module/cms/page/page_list.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../ui-pc-sysmanage/src/module/cms/page/page_list.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ui-pc-sysmanage/src/module/cms/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../ui-pc-sysmanage/src/module/cms/router/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -180,6 +210,7 @@
       <workItem from="1583653009396" duration="1236000" />
       <workItem from="1583656081527" duration="810000" />
       <workItem from="1583740440801" duration="137000" />
+      <workItem from="1584275529306" duration="1435000" />
     </task>
     <servers />
   </component>

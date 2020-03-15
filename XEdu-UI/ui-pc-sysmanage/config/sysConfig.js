@@ -1,8 +1,8 @@
 var sysConfig = {
     xApiUrlPre: '/api',
-    xApiUrl: 'http://api.192.168.199.107.com/',
-    imgUrl:'http://img.192.168.199.107.com/',
-    videoUrl:'http://video.192.168.199.107.com/',
+    xApiUrl: 'http://api.127.0.0.1.com/',
+    imgUrl:'http://img.127.0.0.1.com/',
+    videoUrl:'http://video.127.0.0.1.com/',
     openAuthenticate:true,
     openAuthorize:true
 }

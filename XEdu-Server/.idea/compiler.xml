@@ -7,11 +7,12 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="service-api" />
-        <module name="framework-common" />
-        <module name="service-manage-cms" />
-        <module name="framework-model" />
         <module name="framework-utils" />
+        <module name="service-api" />
+        <module name="framework-model" />
+        <module name="framework-common" />
+        <module name="test-freemarker" />
+        <module name="service-manage-cms" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -21,6 +22,8 @@
       <module name="framework-utils" target="1.8" />
       <module name="service-api" target="1.8" />
       <module name="service-manage-cms" target="1.8" />
+      <module name="test-freemarker" target="1.8" />
+      <module name="test‐freemarker" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
@@ -30,6 +33,8 @@
       <module name="framework-utils" options="-parameters" />
       <module name="service-api" options="-parameters" />
       <module name="service-manage-cms" options="-parameters" />
+      <module name="test-freemarker" options="-parameters" />
+      <module name="test‐freemarker" options="-parameters" />
     </option>
   </component>
 </project>

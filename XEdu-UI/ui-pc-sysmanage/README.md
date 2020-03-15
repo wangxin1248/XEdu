@@ -1,6 +1,6 @@
 # ui-pc-sysmanage
 
-> ui-pc-sysmanage
+> A Vue.js project
 
 ## Build Setup
 
