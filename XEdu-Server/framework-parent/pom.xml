@@ -9,8 +9,9 @@
         <module>../framework-utils</module>
         <module>../framework-model</module>
         <module>../framework-common</module>
-        <module>../test‐freemarker</module>
         <module>../test-freemarker</module>
+        <module>../test-rabbitmq-producer</module>
+        <module>../test-rabbitmq-consumer</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>

@@ -8,10 +8,12 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="framework-utils" />
+        <module name="test-rabbitmq-producer" />
         <module name="service-api" />
         <module name="framework-model" />
         <module name="framework-common" />
         <module name="test-freemarker" />
+        <module name="test-rabbitmq-consumer" />
         <module name="service-manage-cms" />
       </profile>
     </annotationProcessing>
@@ -23,6 +25,8 @@
       <module name="service-api" target="1.8" />
       <module name="service-manage-cms" target="1.8" />
       <module name="test-freemarker" target="1.8" />
+      <module name="test-rabbitmq-consumer" target="1.8" />
+      <module name="test-rabbitmq-producer" target="1.8" />
       <module name="test‐freemarker" target="1.8" />
     </bytecodeTargetLevel>
   </component>
@@ -34,6 +38,8 @@
       <module name="service-api" options="-parameters" />
       <module name="service-manage-cms" options="-parameters" />
       <module name="test-freemarker" options="-parameters" />
+      <module name="test-rabbitmq-consumer" options="-parameters" />
+      <module name="test-rabbitmq-producer" options="-parameters" />
       <module name="test‐freemarker" options="-parameters" />
     </option>
   </component>
