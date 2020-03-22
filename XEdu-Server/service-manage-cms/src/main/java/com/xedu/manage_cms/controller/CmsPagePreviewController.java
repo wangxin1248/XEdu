@@ -2,6 +2,7 @@ package com.xedu.manage_cms.controller;
 
 import com.xedu.framework.web.BaseController;
 import com.xedu.manage_cms.service.PageService;
+import io.swagger.annotations.Api;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -18,6 +19,7 @@ import java.io.IOException;
  * @Description: 进行页面预览
  */
 @Controller
+@Api(value = "cms页面预览接口",tags = {"cms页面预览接口"})
 public class CmsPagePreviewController extends BaseController {
     @Autowired
     PageService pageService;

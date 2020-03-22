@@ -2,11 +2,17 @@ server:
   port: 31001
 spring:
   application:
-    name: service‐manage‐cms
+    name: service-manage-cms
   data:
     mongodb:
       uri: mongodb://root:wx123456@192.168.116.129:27017
       database: xedu_cms
+  rabbitmq:
+    host: 192.168.116.129
+    port: 5672
+    username: admin
+    password: admin
+    virtualHost: /
   freemarker:
     cache: false #关闭模板缓存，方便测试
     settings:

@@ -55,7 +55,7 @@
       <el-table-column
         prop="pageWebPath"
         label="访问路径"
-        width="180">
+        width="100">
       </el-table-column>
       <el-table-column
         prop="pagePhysicalPath"
@@ -89,6 +89,11 @@
             @click="preview(page.row.pageId)">
             预览
           </el-button>
+        </template>
+      </el-table-column>
+      <el-table-column label="发布" width="80">
+        <template slot-scope="scope">
+          <el-button size="small" type="primary" plain @click="postPage(scope.row.pageId)">发布 </el-button>
         </template>
       </el-table-column>
     </el-table>
@@ -171,9 +176,28 @@ export default {
         this.$message.info('已取消删除')
       })
     },
-    // 预览方法
+    // 预览方法（使用指定ip访问）
     preview: function (pageId) {
-      window.open('http://localhost/cms/preview/' + pageId)
+      window.open('http://localhost:31001/cms/preview/' + pageId)
+    },
+    // 页面发布方法
+    postPage: function (pageId) {
+      // 让用户确认是否需要进行发布
+      this.$confirm('此操作将发布当前页面, 是否继续?', '提示', {
+      }).then(() => {
+        // 执行页面删除
+        cmsApi.page_post(pageId).then(res => {
+          if (res.success) {
+            // 删除成功，刷新当前页面，直接在请求query方法即可，因为参数以及保存在params中了，双向绑定
+            this.$message.success('发布成功')
+            this.query()
+          } else {
+            this.$message.error('发布失败')
+          }
+        })
+      }).catch(() => {
+        this.$message.info('已取消发布')
+      })
     }
   },
   // 钩子方法，在页面加载前执行

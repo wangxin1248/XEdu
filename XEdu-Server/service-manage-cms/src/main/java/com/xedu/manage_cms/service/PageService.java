@@ -1,5 +1,6 @@
 package com.xedu.manage_cms.service;
 
+import com.alibaba.fastjson.JSON;
 import com.mongodb.client.gridfs.GridFSBucket;
 import com.mongodb.client.gridfs.GridFSDownloadStream;
 import com.mongodb.client.gridfs.model.GridFSFile;
@@ -13,6 +14,7 @@ import com.xedu.framework.model.response.CommonCode;
 import com.xedu.framework.model.response.QueryResponseResult;
 import com.xedu.framework.model.response.QueryResult;
 import com.xedu.framework.model.response.ResponseResult;
+import com.xedu.manage_cms.config.RabbitmqConfig;
 import com.xedu.manage_cms.dao.CmsPageRepository;
 import com.xedu.manage_cms.dao.CmsTemplateRepository;
 import freemarker.cache.StringTemplateLoader;
@@ -20,6 +22,8 @@ import freemarker.template.Configuration;
 import freemarker.template.Template;
 import org.apache.commons.io.IOUtils;
 import org.apache.commons.lang3.StringUtils;
+import org.bson.types.ObjectId;
+import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.*;
 import org.springframework.data.mongodb.core.query.Criteria;
@@ -32,6 +36,8 @@ import org.springframework.ui.freemarker.FreeMarkerTemplateUtils;
 import org.springframework.web.client.RestTemplate;
 
 import java.io.IOException;
+import java.io.InputStream;
+import java.util.HashMap;
 import java.util.Map;
 import java.util.Optional;
 
@@ -52,6 +58,8 @@ public class PageService {
     GridFsTemplate gridFsTemplate;
     @Autowired
     GridFSBucket gridFSBucket;// 从数据库中读取页面模型
+    @Autowired
+    RabbitTemplate rabbitTemplate;// RabbitMQ模版
 
     /**
      * 执行分页查询服务
@@ -317,5 +325,83 @@ public class PageService {
         ResponseEntity<Map> responseEntity = restTemplate.getForEntity(dataUrl, Map.class);
         Map map = responseEntity.getBody();
         return map;
+    }
+
+    /**
+     * 发布页面实现方法
+     * @param id 页面id
+     * @return 操作结果
+     * 1。执行静态化
+     * 2。保存静态化页面
+     * 3。发送消息
+     */
+    public ResponseResult postPage(String id){
+        // 执行页面静态化
+        String html = this.getPageHtml(id);
+        if(StringUtils.isEmpty(html)){
+            ExceptionCast.cast(CmsCode.CMS_GENERATEHTML_HTMLISNULL);
+        }
+        // 保存静态化页面
+        CmsPage cmsPage = this.savePage(id,html);
+        // 发送消息
+        this.sentPageMessage(id);
+        return new ResponseResult(CommonCode.SUCCESS);
+    }
+
+    /**
+     * 将已经成功保存的页面信息发送到MQ
+     * @param pageId 页面id
+     * 1。查找到指定的cmspage对象
+     * 2。创建要发送的json消息
+     * 3。发送消息
+     */
+    public void sentPageMessage(String pageId){
+        // 查找cmspage对象
+        CmsPage cmsPage = this.findPageById(pageId);
+        if(cmsPage == null){
+            ExceptionCast.cast(CmsCode.CMS_PAGE_NOTEXISTS);
+        }
+        // 创建要发送的json消息
+        Map<String,String> msgMap = new HashMap<>();
+        msgMap.put("pageId",pageId);
+        String message = JSON.toJSONString(msgMap);
+        // 站点id作为routingKey
+        String routingKey = cmsPage.getSiteId();
+        // 发送消息
+        rabbitTemplate.convertAndSend(RabbitmqConfig.EX_ROUTING_CMS_POSTPAGE,routingKey,message);
+    }
+
+    /**
+     * 保存html页面
+     * @param pageId 页面id
+     * @param html 页面信息
+     * @return CmsPage对象
+     * 1。查找到cmspage对象
+     * 2。获取cmspage对象的htmlFileId
+     * 3。将cmspage对象所对应的旧的htmlFile进行删除
+     * 3。将新的html文件保存到gridFS中
+     * 4。更新cmspage对象
+     * 5。返回cmspage对象
+     */
+    public CmsPage savePage(String pageId,String html){
+        // 查找cmspage对象
+        CmsPage cmsPage = this.findPageById(pageId);
+        if(cmsPage == null){
+            ExceptionCast.cast(CmsCode.CMS_PAGE_NOTEXISTS);
+        }
+        // 将旧的文件进行删除
+        String htmlFileId = cmsPage.getHtmlFileId();
+        if(StringUtils.isNotEmpty(htmlFileId)){
+            gridFsTemplate.delete(Query.query(Criteria.where("_id").is(htmlFileId)));
+        }
+        // 保存html文件到gridfs
+        InputStream inputStream = IOUtils.toInputStream(html);
+        ObjectId objectId = gridFsTemplate.store(inputStream,cmsPage.getPageName());
+        // 获取html文件id
+        String fileId = objectId.toString();
+        // 将cmspage中的文件id进行更新
+        cmsPage.setHtmlFileId(fileId);
+        cmsPageRepository.save(cmsPage);
+        return cmsPage;
     }
 }
