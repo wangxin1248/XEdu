@@ -1,6 +1,7 @@
 <template>
   <div>
     <el-button type="primary" @click="teachplayFormVisible = true">添加课程计划</el-button>
+    <!--  树形组件  -->
     <el-tree
       :data="teachplanList"
       :props="defaultProps"
@@ -180,6 +181,7 @@
 
       },
       renderContent(h, { node, data, store }) {
+        // react语法，需要编辑器设置
         return (
           <span style="flex: 1; display: flex; align-items: center; justify-content: space-between; font-size: 14px; padding-right: 8px;">
             <span>
@@ -199,8 +201,6 @@
             if(res && res.children){
               this.teachplanList = res.children;
             }
-
-
         })
       }
     },
@@ -208,8 +208,7 @@
       //课程id
       this.courseid = this.$route.params.courseid;
       //查询课程计划
-      // this.findTeachplan()
-
+      this.findTeachplan()
     }
   }
 </script>

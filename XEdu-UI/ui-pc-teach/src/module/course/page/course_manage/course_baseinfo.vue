@@ -96,21 +96,21 @@
                 this.courseForm.mt = mt;
                 this.courseForm.st = st;
                 let id = this.courseForm.id
-                courseApi.updateCoursebase(id,this.courseForm).then((res) => {
-                  this.editLoading = false;
-                  if(res.success){
-                    this.$message({
-                      message: '提交成功',
-                      type: 'success'
-                    });
-                  }else{
-                    if(res.message){
-                      this.$message.error(res.message);
-                    }else{
-                      this.$message.error('提交失败');
-                    }
-                  }
-                });
+                // courseApi.updateCoursebase(id,this.courseForm).then((res) => {
+                //   this.editLoading = false;
+                //   if(res.success){
+                //     this.$message({
+                //       message: '提交成功',
+                //       type: 'success'
+                //     });
+                //   }else{
+                //     if(res.message){
+                //       this.$message.error(res.message);
+                //     }else{
+                //       this.$message.error('提交失败');
+                //     }
+                //   }
+                // });
               });
             }
           });
@@ -135,13 +135,13 @@
       //查询课程信息
         //课程id
         this.courseid = this.$route.params.courseid;
-         courseApi.getCoursebaseById(this.courseid).then((res) => {
-//          console.log(res);
-          this.courseForm = res;
-          //课程分类显示，需要两级分类
-          this.categoryActive.push(this.courseForm.mt);
-          this.categoryActive.push(this.courseForm.st);
-        });
+//          courseApi.getCoursebaseById(this.courseid).then((res) => {
+// //          console.log(res);
+//           this.courseForm = res;
+//           //课程分类显示，需要两级分类
+//           this.categoryActive.push(this.courseForm.mt);
+//           this.categoryActive.push(this.courseForm.st);
+//         });
     }
   }
 </script>

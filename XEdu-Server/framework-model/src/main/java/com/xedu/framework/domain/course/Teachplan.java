@@ -9,11 +9,12 @@ import java.io.Serializable;
 
 /**
  * Created by admin on 2018/2/7.
+ * 教学计划表
  */
 @Data
 @ToString
 @Entity
-@Table(name="teachplan")
+@Table(name="teachplan")//根数据库表对应
 @GenericGenerator(name = "jpa-uuid", strategy = "uuid")
 public class Teachplan implements Serializable {
     private static final long serialVersionUID = -916357110051689485L;

@@ -8,6 +8,7 @@ import java.util.List;
 
 /**
  * Created by admin on 2018/2/7.
+ * 查询教学计划列表的返回类型
  */
 @Data
 @ToString

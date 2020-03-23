@@ -122,14 +122,14 @@
       },
       process (id) {
 //        console.log(id)
-        mediaApi.media_process(id).then((res)=>{
-          console.log(res)
-         if(res.success){
-           this.$message.success('开始处理，请稍后查看处理结果');
-         }else{
-           this.$message.error('操作失败，请刷新页面重试');
-         }
-        })
+//         mediaApi.media_process(id).then((res)=>{
+//           console.log(res)
+//          if(res.success){
+//            this.$message.success('开始处理，请稍后查看处理结果');
+//          }else{
+//            this.$message.error('操作失败，请刷新页面重试');
+//          }
+//         })
       },
       query(){
         mediaApi.media_list(this.params.page,this.params.size,this.params).then((res)=>{
