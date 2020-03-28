@@ -1,9 +1,28 @@
+create table teachplan
+(
+    id          varchar(32)  not null
+        primary key,
+    pname       varchar(64)  not null,
+    parentid    varchar(32)  not null,
+    grade       char         not null comment '层级，分为1、2、3级',
+    ptype       char         null comment '课程类型:1视频、2文档',
+    description varchar(500) null comment '章节及课程时介绍',
+    timelength  double(5, 2) null comment '时长，单位分钟',
+    courseid    varchar(32)  null comment '课程id',
+    orderby     varchar(32)  null comment '排序字段',
+    status      char         not null comment '状态：未发布、已发布',
+    trylearn    char         null comment '是否试学'
+)
+    charset = utf8;
+
 INSERT INTO xedu_course.teachplan (id, pname, parentid, grade, ptype, description, timelength, courseid, orderby, status, trylearn) VALUES ('1', 'Bootstrap开发框架', '0', '1', '0', null, null, '4028e581617f945f01617f9dabc40000', '1', '0', null);
 INSERT INTO xedu_course.teachplan (id, pname, parentid, grade, ptype, description, timelength, courseid, orderby, status, trylearn) VALUES ('2', '计算机原理', '1', '2', '0', '介绍计算机工作原理', null, '4028e581617f945f01617f9dabc40000', '1', '0', null);
 INSERT INTO xedu_course.teachplan (id, pname, parentid, grade, ptype, description, timelength, courseid, orderby, status, trylearn) VALUES ('22', 'spring cloud与spring boot实战', '0', '1', null, null, null, '4028e58161bcf7f40161bcf8b77c0000', '1', '0', null);
 INSERT INTO xedu_course.teachplan (id, pname, parentid, grade, ptype, description, timelength, courseid, orderby, status, trylearn) VALUES ('297e02f7639af61a01639afd3a7b0000', '第一节', '402885816243d2dd016243f24c040003', '2', '1', null, null, '402885816243d2dd016243f24c030002', '1', '0', null);
 INSERT INTO xedu_course.teachplan (id, pname, parentid, grade, ptype, description, timelength, courseid, orderby, status, trylearn) VALUES ('3', '计算机硬件', '2', '3', '1', null, 10, '4028e581617f945f01617f9dabc40000', '1', '0', null);
 INSERT INTO xedu_course.teachplan (id, pname, parentid, grade, ptype, description, timelength, courseid, orderby, status, trylearn) VALUES ('4', '计算机软件', '2', '3', '1', null, 12, '4028e581617f945f01617f9dabc40000', '2', '0', null);
+INSERT INTO xedu_course.teachplan (id, pname, parentid, grade, ptype, description, timelength, courseid, orderby, status, trylearn) VALUES ('402847eb710598e50171059971750000', '测试', '1', '2', '1', '测试章节', 20, '4028e581617f945f01617f9dabc40000', '5', '0', null);
+INSERT INTO xedu_course.teachplan (id, pname, parentid, grade, ptype, description, timelength, courseid, orderby, status, trylearn) VALUES ('402847eb710598e50171059a82650001', '测试-1', '402847eb710598e50171059971750000', '3', '1', '测试章节第一章测试内容', 20, '4028e581617f945f01617f9dabc40000', '5', '0', null);
 INSERT INTO xedu_course.teachplan (id, pname, parentid, grade, ptype, description, timelength, courseid, orderby, status, trylearn) VALUES ('402881e66417407b01641744afc30000', '基础知识', '4028858162e5d6e00162e5e0227b0000', '2', null, null, null, '297e7c7c62b888f00162b8a965510001', null, '0', null);
 INSERT INTO xedu_course.teachplan (id, pname, parentid, grade, ptype, description, timelength, courseid, orderby, status, trylearn) VALUES ('402881e66417407b01641744fc650001', '入门程序', '402881e66417407b01641744afc30000', '3', '1', '入门程序', 11, '297e7c7c62b888f00162b8a965510001', '1', '0', null);
 INSERT INTO xedu_course.teachplan (id, pname, parentid, grade, ptype, description, timelength, courseid, orderby, status, trylearn) VALUES ('402881e764034e430164035091a00002', '面向对象', '4028858162bec7f30162becad8590000', '2', null, '面向对象', null, '297e7c7c62b888f00162b8a7dec20000', '3', '0', null);

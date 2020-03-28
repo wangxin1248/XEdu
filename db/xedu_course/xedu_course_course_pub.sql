@@ -1,3 +1,30 @@
+create table course_pub
+(
+    id          varchar(32)                         not null comment '主键'
+        primary key,
+    name        varchar(32)                         not null comment '课程名称',
+    users       varchar(500)                        not null comment '适用人群',
+    mt          varchar(32)                         not null comment '大分类',
+    st          varchar(32)                         not null comment '小分类',
+    grade       varchar(32)                         not null comment '课程等级',
+    studymodel  varchar(32)                         not null comment '学习模式',
+    teachmode   varchar(32)                         null comment '教育模式',
+    description text                                not null comment '课程介绍',
+    timestamp   timestamp default CURRENT_TIMESTAMP not null comment '时间戳logstash使用',
+    charge      varchar(32)                         not null comment '收费规则，对应数据字典',
+    valid       varchar(32)                         not null comment '有效性，对应数据字典',
+    qq          varchar(32)                         null comment '咨询qq',
+    price       float(10, 2)                        null comment '价格',
+    price_old   float(10, 2)                        null comment '原价格',
+    expires     varchar(32)                         null comment '过期时间',
+    start_time  varchar(32)                         null comment '课程有效期-开始时间',
+    end_time    varchar(32)                         null comment '课程有效期-结束时间',
+    pic         varchar(500)                        null comment '课程图片',
+    teachplan   text                                not null comment '课程计划',
+    pub_time    varchar(32)                         null comment '发布时间'
+)
+    charset = utf8;
+
 INSERT INTO xedu_course.course_pub (id, name, users, mt, st, grade, studymodel, teachmode, description, timestamp, charge, valid, qq, price, price_old, expires, start_time, end_time, pic, teachplan, pub_time) VALUES ('297e7c7c62b888f00162b8a7dec20000', 'test_java基础33', 'java爱好者d', '1-3', '1-3-3', '200002', '201002', null, 'test_java基础33test_java基础33test_java基础33', '2018-04-27 22:57:24', '203002', '204002', '32432', 55, null, null, null, null, 'group1/M00/00/02/wKhlQFrQfNqAL0d_AALDG1Ia4xE439.png', '', '2018-04-26 16:57:23');
 INSERT INTO xedu_course.course_pub (id, name, users, mt, st, grade, studymodel, teachmode, description, timestamp, charge, valid, qq, price, price_old, expires, start_time, end_time, pic, teachplan, pub_time) VALUES ('297e7c7c62b888f00162b8a965510001', 'test_java基础', 'test_java基础', '1-3', '1-3-2', '200001', '201001', null, 'test_java基础2test_java基础2test_java基础2test_java基础2test_java基础2test_java基础2test_java基础2test_java基础2test_java基础2test_java基础2', '2018-04-27 22:57:24', '203001', '204001', '443242', null, null, null, null, null, 'group1/M00/00/00/wKhlQFrZS2aACA0LAAAxkpcK7CQ874.jpg', 'java基础语法 ', '2018-04-25 19:11:35');
 INSERT INTO xedu_course.course_pub (id, name, users, mt, st, grade, studymodel, teachmode, description, timestamp, charge, valid, qq, price, price_old, expires, start_time, end_time, pic, teachplan, pub_time) VALUES ('297e7c7c62b8aa9d0162b8ab13910000', 'java基础3', 'java基础3', '1-3', '1-3-2', '200001', '201001', null, 'java基础3java基础3java基础3java基础3java基础3java基础3', '2018-04-27 22:57:24', '203001', '204001', null, null, null, null, null, null, 'group1/M00/00/00/wKhlQFrZS2aACA0LAAAxkpcK7CQ874.jpg', '', '2018-04-26 17:10:55');

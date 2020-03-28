@@ -1,7 +1,14 @@
 package com.xedu.api.course;
 
+import com.xedu.framework.domain.course.CourseBase;
+import com.xedu.framework.domain.course.CourseMarket;
 import com.xedu.framework.domain.course.Teachplan;
+import com.xedu.framework.domain.course.ext.CategoryNode;
+import com.xedu.framework.domain.course.ext.CourseInfo;
 import com.xedu.framework.domain.course.ext.TeachplanNode;
+import com.xedu.framework.domain.course.request.CourseListRequest;
+import com.xedu.framework.domain.course.response.AddCourseResult;
+import com.xedu.framework.model.response.QueryResponseResult;
 import com.xedu.framework.model.response.ResponseResult;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -17,4 +24,16 @@ public interface CourseControllerApi {
     public TeachplanNode findTeachplanList(String courseId);
     @ApiOperation("课程计划添加")
     public ResponseResult addTeachplan(Teachplan teachplan);
+    @ApiOperation("查询我的课程列表")
+    public QueryResponseResult<CourseInfo> findCourseList(int page, int size, CourseListRequest courseListRequest);
+    @ApiOperation("新增课程")
+    public AddCourseResult addCourse(CourseBase courseBase);
+    @ApiOperation("获取课程基础信息")
+    public CourseBase getCourseBaseById(String courseId) throws RuntimeException;
+    @ApiOperation("更新课程基础信息")
+    public ResponseResult updateCourseBase(String id,CourseBase courseBase);
+    @ApiOperation("获取课程营销信息")
+    public CourseMarket getCourseMarketById(String courseId);
+    @ApiOperation("更新课程营销信息")
+    public ResponseResult updateCourseMarket(String id,CourseMarket courseMarket);
 }

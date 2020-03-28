@@ -1,8 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.xedu.manage_course.dao.CourseMapper">
+    <!--查找课程对象-->
     <select id="findCourseBaseById" parameterType="java.lang.String"
             resultType="com.xedu.framework.domain.course.CourseBase">
         select * from course_base where id = #{id}
+    </select>
+    <!--查找课程列表-->
+    <select id="findCourseListPage" parameterType="com.xedu.framework.domain.course.request.CourseListRequest"
+            resultType="com.xedu.framework.domain.course.ext.CourseInfo">
+        select base.*,pic.pic from course_base  base left join course_pic pic on base.id=pic.courseid
     </select>
 </mapper>

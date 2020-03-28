@@ -1,3 +1,11 @@
+create table course_pic
+(
+    courseid varchar(32)  not null comment '课程id'
+        primary key,
+    pic      varchar(256) not null comment '图片id'
+)
+    charset = utf8;
+
 INSERT INTO xedu_course.course_pic (courseid, pic) VALUES ('297e7c7c62b888f00162b8a7dec20000', 'group1/M00/00/02/wKhlQFrQfNqAL0d_AALDG1Ia4xE439.png');
 INSERT INTO xedu_course.course_pic (courseid, pic) VALUES ('402885816240d276016240f7e5000002', 'group1/M00/00/01/wKhlQFqw4d6AdhIaAAF_xcS40bo964.jpg');
 INSERT INTO xedu_course.course_pic (courseid, pic) VALUES ('402885816243d2dd016243f24c030002', 'group1/M00/00/02/wKhlQFrQfNqAL0d_AALDG1Ia4xE439.png');

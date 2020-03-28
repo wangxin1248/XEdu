@@ -1,3 +1,16 @@
+create table category
+(
+    id       varchar(32) not null comment '主键'
+        primary key,
+    name     varchar(32) not null comment '分类名称',
+    label    varchar(32) null comment '分类标签默认和名称一样',
+    parentid varchar(32) null comment '父结点id',
+    isshow   char        null comment '是否显示',
+    orderby  int(4)      null comment '排序字段',
+    isleaf   char        null comment '是否叶子'
+)
+    charset = utf8;
+
 INSERT INTO xedu_course.category (id, name, label, parentid, isshow, orderby, isleaf) VALUES ('1', '根结点', '根结点', '0', '1', 1, '0');
 INSERT INTO xedu_course.category (id, name, label, parentid, isshow, orderby, isleaf) VALUES ('1-1', '前端开发', '前端开发', '1', '1', 1, '0');
 INSERT INTO xedu_course.category (id, name, label, parentid, isshow, orderby, isleaf) VALUES ('1-1-1', 'HTML/CSS', 'HTML/CSS', '1-1', '1', 1, '1');

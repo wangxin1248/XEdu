@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.xedu.manage_course.dao.CategoryMapper">
+    <!--  定义查询结果,id与select中定义的相同  -->
+    <resultMap id="categoryMap" type="com.xedu.framework.domain.course.ext.CategoryNode">
+        <!--    第一级查询结果    -->
+        <id property="id" column="one_id"/>
+        <result property="name" column="one_name"/>
+        <result property="label" column="one_label"/>
+        <result property="isshow" column="one_isshow"/>
+        <result property="isleaf" column="one_isleaf"/>
+        <result property="orderby" column="one_orderby"/>
+        <result property="parentid" column="one_parentid"/>
+        <collection property="children" ofType="com.xedu.framework.domain.course.ext.CategoryNode">
+            <!--    第二级查询结果    -->
+            <id property="id" column="two_id"/>
+            <result property="name" column="two_name"/>
+            <result property="label" column="two_label"/>
+            <result property="isshow" column="two_isshow"/>
+            <result property="isleaf" column="two_isleaf"/>
+            <result property="orderby" column="two_orderby"/>
+            <result property="parentid" column="two_parentid"/>
+            <collection property="children" ofType="com.xedu.framework.domain.course.ext.CategoryNode">
+                <!--    第三级查询结果    -->
+                <id property="id" column="three_id"/>
+                <result property="name" column="three_name"/>
+                <result property="label" column="three_label"/>
+                <result property="isshow" column="three_isshow"/>
+                <result property="isleaf" column="three_isleaf"/>
+                <result property="orderby" column="three_orderby"/>
+                <result property="parentid" column="three_parentid"/>
+            </collection>
+        </collection>
+    </resultMap>
+    <!--  定义sql语句  -->
+    <select id="selectList" resultMap="categoryMap">
+        select
+            a.id one_id,a.name one_name,a.label one_label, a.isshow one_isshow, a.isleaf one_isleaf, a.orderby one_orderby, a.parentid one_parentid,
+            b.id two_id,b.name two_name,b.label two_label, b.isshow two_isshow, b.isleaf two_isleaf, b.orderby two_orderby, b.parentid two_parentid,
+            c.id three_id,c.name three_name,c.label three_label, c.isshow three_isshow, c.isleaf three_isleaf, c.orderby three_orderby, c.parentid three_parentid
+        from
+            category a left join category b
+                on a.id=b.parentid
+                left join category c
+                    on b.id=c.parentid
+        where a.parentid='0'
+        order by a.orderby,b.orderby,c.orderby;
+    </select>
+</mapper>

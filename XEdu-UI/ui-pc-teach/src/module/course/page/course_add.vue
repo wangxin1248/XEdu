@@ -85,20 +85,34 @@
     methods: {
         //新增课程提交
       save () {
-          //处理课程分类
-          // 选择课程分类存储到categoryActive
-           this.courseForm.mt=  this.categoryActive[0]//大分类
-           this.courseForm.st=  this.categoryActive[1]//小分类
-          courseApi.addCourseBase(this.courseForm).then(res=>{
-              if(res.success){
-                  this.$message.success("提交成功")
-                //跳转到我的课程
-                this.$router.push({ path: '/course/list'})
-              }else{
-                this.$message.error(res.message)
-              }
-
-          })
+        this.$refs.courseForm.validate((valid) => {
+          if (valid) {
+            this.$confirm('确认提交吗？', '提示', {}).then(() => {
+              //当前选择的分类
+              let mt = this.categoryActive[0];
+              let st = this.categoryActive[1];
+              this.courseForm.mt = mt;
+              this.courseForm.st = st;
+              //请求服务接口
+              courseApi.addCourseBase(this.courseForm).then((res) => {
+                if (res.success) {
+                  console.log(res);
+                  this.$message.success('提交成功');
+                  // //跳转到课程图片
+                  // this.$router.push({path: '/course/add/picture/1/' + this.courseid})
+                  //跳转到我的课程
+                  this.$router.push({ path: '/course/list'})
+                } else {
+                  if (res.message) {
+                    this.$message.error(res.message);
+                  } else {
+                    this.$message.error('提交失败');
+                  }
+                }
+              });
+            });
+          }
+        });
       }
     },
     created(){
@@ -107,9 +121,9 @@
     mounted(){
       // 查询课程分类
       courseApi.category_findlist().then(res=>{
+          // 获取返回值的children作为数据对象
           this.categoryList = res.children;
           console.log(this.categoryList)
-
       })
 
       //查询数据字典

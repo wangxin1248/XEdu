@@ -1,3 +1,21 @@
+create table course_base
+(
+    id          varchar(32)  not null
+        primary key,
+    name        varchar(32)  not null comment '课程名称',
+    users       varchar(500) null comment '适用人群',
+    mt          varchar(32)  not null comment '课程大分类',
+    grade       varchar(32)  not null comment '课程等级',
+    studymodel  varchar(32)  not null comment '学习模式',
+    teachmode   varchar(32)  null comment '授课模式',
+    description text         null comment '课程介绍',
+    st          varchar(32)  not null comment '课程小分类',
+    status      varchar(32)  null comment '课程状态',
+    company_id  varchar(32)  null comment '教育机构',
+    user_id     varchar(32)  null comment '创建用户'
+)
+    charset = utf8;
+
 INSERT INTO xedu_course.course_base (id, name, users, mt, grade, studymodel, teachmode, description, st, status, company_id, user_id) VALUES ('297e7c7c62b888f00162b8a7dec20000', 'test_java基础33', 'b1', '1-3', '200002', '201002', null, 'test_java基础33test_java基础33test_java基础33', '1-3-3', '202002', '', null);
 INSERT INTO xedu_course.course_base (id, name, users, mt, grade, studymodel, teachmode, description, st, status, company_id, user_id) VALUES ('297e7c7c62b888f00162b8a965510001', 'test_java基础', 'test_java基础', '1-3', '200001', '201001', null, 'test_java基础2test_java基础2test_java基础2test_java基础2test_java基础2test_java基础2test_java基础2test_java基础2test_java基础2test_java基础2', '1-3-2', '202002', '', null);
 INSERT INTO xedu_course.course_base (id, name, users, mt, grade, studymodel, teachmode, description, st, status, company_id, user_id) VALUES ('297e7c7c62b8aa9d0162b8ab13910000', 'java基础3', 'java基础3', '1-3', '200001', '201001', null, 'java基础3java基础3java基础3java基础3java基础3java基础3', '1-3-2', '202002', '', null);
@@ -9,6 +27,13 @@ INSERT INTO xedu_course.course_base (id, name, users, mt, grade, studymodel, tea
 INSERT INTO xedu_course.course_base (id, name, users, mt, grade, studymodel, teachmode, description, st, status, company_id, user_id) VALUES ('297e7c7c62b8afe20162b8b0477c0000', 'test_java基础6', 'test_java基础6', '1-3', '200001', '201001', null, 'test_java基础6test_java基础6', '1-3-2', '202001', '', null);
 INSERT INTO xedu_course.course_base (id, name, users, mt, grade, studymodel, teachmode, description, st, status, company_id, user_id) VALUES ('297e7c7c62b8b3ff0162b8b58c260000', 'test_java基础6', 'test_java基础6', '1-3', '200001', '201001', null, 'test_java基础6', '1-3-2', '202001', '', null);
 INSERT INTO xedu_course.course_base (id, name, users, mt, grade, studymodel, teachmode, description, st, status, company_id, user_id) VALUES ('40281f81640220d601640222665b0001', 'java零基础入门', 'java小白', '1-3', '200001', '201001', null, 'java零基础入门java零基础入门java零基础入门java零基础入门', '1-3-2', '202001', null, null);
+INSERT INTO xedu_course.course_base (id, name, users, mt, grade, studymodel, teachmode, description, st, status, company_id, user_id) VALUES ('402847eb71205ec50171206110000000', 'Docker学习', '任何人', '1-6', '200003', '201001', null, '学习Docker的基本命令以及相关配置', '1-6-4', null, null, null);
+INSERT INTO xedu_course.course_base (id, name, users, mt, grade, studymodel, teachmode, description, st, status, company_id, user_id) VALUES ('402847eb71205ec501712061978c0001', 'Docker进阶', '任何人', '1-6', '200003', '201001', null, 'Docker进阶学习', '1-6-4', null, null, null);
+INSERT INTO xedu_course.course_base (id, name, users, mt, grade, studymodel, teachmode, description, st, status, company_id, user_id) VALUES ('402847eb71205ec50171208a3b660002', 'Docker实战', '掌握一定Docker基础的人员', '1-6', '200003', '201001', null, '面向掌握一定Docker基础的人员进行的Docker实战项目', '1-6-4', null, null, null);
+INSERT INTO xedu_course.course_base (id, name, users, mt, grade, studymodel, teachmode, description, st, status, company_id, user_id) VALUES ('402847eb71208f46017120901ec60000', 'Docker入门', '任何人', '1-6', '200001', '201001', null, 'Docker入门知识学习', '1-6-4', '202001', null, null);
+INSERT INTO xedu_course.course_base (id, name, users, mt, grade, studymodel, teachmode, description, st, status, company_id, user_id) VALUES ('402847eb71208f46017120912fe40001', 'Docker测试', '任何人', '1-6', '200001', '201001', null, 'Docker测试', '1-6-4', '202001', null, null);
+INSERT INTO xedu_course.course_base (id, name, users, mt, grade, studymodel, teachmode, description, st, status, company_id, user_id) VALUES ('402847eb71208f4601712094bfab0002', 'Docker测试1', '任何人', '1-6', '200001', '201001', null, 'Docker测试1', '1-6-4', '202001', null, null);
+INSERT INTO xedu_course.course_base (id, name, users, mt, grade, studymodel, teachmode, description, st, status, company_id, user_id) VALUES ('402847eb71208f46017120964f5e0003', 'Docker测试4', '任何人', '1-6', '200003', '201001', null, 'Docker测试4', '1-6-4', '202001', null, null);
 INSERT INTO xedu_course.course_base (id, name, users, mt, grade, studymodel, teachmode, description, st, status, company_id, user_id) VALUES ('402885816240d276016240f7e5000002', 'test', 'dd', '1-6', '200003', '201001', null, '', '1-6-1', '202001', '2', null);
 INSERT INTO xedu_course.course_base (id, name, users, mt, grade, studymodel, teachmode, description, st, status, company_id, user_id) VALUES ('402885816240d276016241019be70004', 'ddd', 'dd', '1-1', '200001', '201001', null, '', '1-1-2', '202001', '2', null);
 INSERT INTO xedu_course.course_base (id, name, users, mt, grade, studymodel, teachmode, description, st, status, company_id, user_id) VALUES ('402885816240d2760162410bac010006', 'ffff', '', '1-6', '200001', '201001', null, '', '1-6-4', '202001', '2', null);

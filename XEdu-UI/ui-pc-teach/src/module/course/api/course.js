@@ -24,6 +24,27 @@ export const addCourseBase = params => {
 export const findTeachplanList = courseid => {
   return http.requestQuickGet(apiUrl + '/course/teachplan/list/' + courseid)
 }
+
+/* 查询课程基本信息 */
+export const getCoursebaseById = courseid => {
+  return http.requestQuickGet(apiUrl+'/course/coursebase/get/'+courseid)
+}
+
+/* 更新课程基本信息 */
+export const updateCoursebase = (id, params) => {
+  return http.requestPut(apiUrl+'/course/coursebase/update/'+id, params)
+}
+
+/* 获取课程营销信息 */
+export const getCourseMarketById = id => {
+  return http.requestQuickGet(apiUrl+'/course/coursemarket/get/'+id)
+}
+
+/* 更新课程营销信息 */
+export const updateCourseMarket = (id, params) => {
+  return http.requestPut(apiUrl+'/course/coursemarket/update/'+id,params)
+}
+
 /* 添加课程计划 */
 export const addTeachplan = teachplah => {
   return http.requestPost(apiUrl + '/course/teachplan/add', teachplah)
