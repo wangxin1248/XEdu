@@ -412,13 +412,14 @@
 { 
     "_id" : ObjectId("5e6da7493e82437c7c617b01"), 
     "siteId" : "5a751fab6abb5044e0d19ea1", 
-    "pageName" : "轮播图test", 
+    "pageName" : "index_banner.html", 
     "pageAliase" : "轮播图test", 
     "pageWebPath" : "test", 
-    "pagePhysicalPath" : "test", 
+    "pagePhysicalPath" : "include/", 
     "pageType" : "0", 
     "pageCreateTime" : ISODate("2020-03-15T03:55:32.599+0000"), 
     "templateId" : "5e6e46955774243696a75c1d", 
+    "htmlFileId" : "5e7711a9f6bec3601fef019b", 
     "dataUrl" : "http://localhost:31001/cms/config/getmodel/5a791725dd573c3574ee333f", 
     "_class" : "com.xedu.framework.domain.cms.CmsPage"
 }

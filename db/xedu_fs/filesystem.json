@@ -1,0 +1,26 @@
+{ 
+    "_id" : "group1/M00/00/00/wKh0gV6AqwSAPXFdAAAQOYVGbM4953.png", 
+    "filePath" : "group1/M00/00/00/wKh0gV6AqwSAPXFdAAAQOYVGbM4953.png", 
+    "fileSize" : NumberLong(4153), 
+    "fileName" : "spring-boot-logo.png", 
+    "fileType" : "image/png", 
+    "fileWidth" : NumberInt(0), 
+    "fileHeight" : NumberInt(0), 
+    "businesskey" : "test", 
+    "filetag" : "test", 
+    "metadata" : {
+        "name" : "test"
+    }, 
+    "_class" : "com.xedu.framework.domain.filesystem.FileSystem"
+}
+{ 
+    "_id" : "group1/M00/00/00/wKh0gV6ArJyAQ5BCAAAQOYVGbM4988.png", 
+    "filePath" : "group1/M00/00/00/wKh0gV6ArJyAQ5BCAAAQOYVGbM4988.png", 
+    "fileSize" : NumberLong(4153), 
+    "fileName" : "spring-boot-logo.png", 
+    "fileType" : "image/png", 
+    "fileWidth" : NumberInt(0), 
+    "fileHeight" : NumberInt(0), 
+    "filetag" : "course", 
+    "_class" : "com.xedu.framework.domain.filesystem.FileSystem"
+}
