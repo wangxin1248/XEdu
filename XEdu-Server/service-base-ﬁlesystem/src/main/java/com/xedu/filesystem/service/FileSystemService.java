@@ -57,7 +57,7 @@ public class FileSystemService {
         }
         // 将文件上传到FastDFS得到文件id
         String fileId = fdfsUpload(multipartFile);
-        // 进行数据合法性判断
+        // 进行文件id数据合法性判断
         if(StringUtils.isEmpty(fileId)){
             ExceptionCast.cast(FileSystemCode.FS_UPLOADFILE_SERVERFAIL);
         }

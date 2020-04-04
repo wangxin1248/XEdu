@@ -8,16 +8,17 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="framework-utils" />
-        <module name="service-manage-cms" />
+        <module name="govern-center" />
         <module name="test-fastdfs" />
         <module name="service-manage-cms-client" />
+        <module name="service-manage-course" />
         <module name="test-rabbitmq-producer" />
         <module name="framework-model" />
         <module name="framework-common" />
         <module name="service-base-ﬁlesystem" />
         <module name="service-api" />
         <module name="test-freemarker" />
-        <module name="service-manage-course" />
+        <module name="service-manage-cms" />
         <module name="test-rabbitmq-consumer" />
       </profile>
     </annotationProcessing>
@@ -26,6 +27,7 @@
       <module name="framework-model" target="1.8" />
       <module name="framework-parent" target="1.8" />
       <module name="framework-utils" target="1.8" />
+      <module name="govern-center" target="1.8" />
       <module name="service-api" target="1.8" />
       <module name="service-base-ﬁlesystem" target="1.8" />
       <module name="service-manage-cms" target="1.8" />
@@ -43,6 +45,7 @@
       <module name="framework-common" options="-parameters" />
       <module name="framework-model" options="-parameters" />
       <module name="framework-utils" options="-parameters" />
+      <module name="govern-center" options="-parameters" />
       <module name="service-api" options="-parameters" />
       <module name="service-base-ﬁlesystem" options="-parameters" />
       <module name="service-manage-cms" options="-parameters" />

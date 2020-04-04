@@ -4,6 +4,7 @@ import com.github.pagehelper.Page;
 import com.github.pagehelper.PageHelper;
 import com.xedu.framework.domain.course.CourseBase;
 import com.xedu.framework.domain.course.CourseMarket;
+import com.xedu.framework.domain.course.CoursePic;
 import com.xedu.framework.domain.course.Teachplan;
 import com.xedu.framework.domain.course.ext.CourseInfo;
 import com.xedu.framework.domain.course.ext.TeachplanNode;
@@ -43,6 +44,8 @@ public class CourseService {
     CourseMarketRepository courseMarketRepository;
     @Autowired
     CourseMapper courseMapper;
+    @Autowired
+    CoursepicRepository coursepicRepository;
 
     /**
      * 根据课程id查找课程对应的课程计划
@@ -279,5 +282,68 @@ public class CourseService {
         // 保存对象
         courseMarketRepository.save(oldCourseMarket);
         return new ResponseResult(CommonCode.SUCCESS);
+    }
+
+    /**
+     * 添加课程图片信息，将课程信息和图片id进行关联
+     * @param courseId 课程id
+     * @param pic 图片id
+     * @return ResponseResult
+     */
+    @Transactional
+    public ResponseResult addCoursePic(String courseId,String pic){
+        // 对参数进行合法性验证
+        if(StringUtils.isEmpty(courseId) || StringUtils.isEmpty(pic)){
+            ExceptionCast.cast(CommonCode.INVALID_PARAM);
+        }
+        // 声明coursepic对象
+        CoursePic coursePic = null;
+        // 首先查找当前对象是否存在
+        Optional<CoursePic> optional = coursepicRepository.findById(courseId);
+        if(optional.isPresent()){
+            coursePic = optional.get();
+        }else{
+            // 不存在则新建一个对象
+            coursePic = new CoursePic();
+        }
+        coursePic.setCourseid(courseId);
+        coursePic.setPic(pic);
+        // 执行更新或保存任务
+        coursepicRepository.save(coursePic);
+        return new ResponseResult(CommonCode.SUCCESS);
+    }
+
+    /**
+     * 根据课程id返回课程对应的图片id
+     * @param courseId 课程id
+     * @return 课程图片对象
+     */
+    public CoursePic findCoursePic(String courseId){
+        if(StringUtils.isEmpty(courseId)){
+            ExceptionCast.cast(CommonCode.INVALID_PARAM);
+        }
+        Optional<CoursePic> optional = coursepicRepository.findById(courseId);
+        if(optional.isPresent()){
+            return optional.get();
+        }
+        return null;
+    }
+
+    /**
+     * 删除课程图片
+     * @param courseId 课程id
+     * @return 删除结果
+     */
+    @Transactional
+    public ResponseResult deleteCoursePic(String courseId){
+        if(StringUtils.isEmpty(courseId)){
+            ExceptionCast.cast(CommonCode.INVALID_PARAM);
+        }
+        long result = coursepicRepository.deleteByCourseid(courseId);
+        if(result>0){
+            return new ResponseResult(CommonCode.SUCCESS);
+        }else{
+            return new ResponseResult(CommonCode.FAIL);
+        }
     }
 }

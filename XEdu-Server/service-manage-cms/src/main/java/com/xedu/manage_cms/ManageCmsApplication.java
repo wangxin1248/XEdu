@@ -3,6 +3,7 @@ package com.xedu.manage_cms;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.domain.EntityScan;
+import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.http.client.OkHttp3ClientHttpRequestFactory;
@@ -13,6 +14,7 @@ import org.springframework.web.client.RestTemplate;
  * @Description: 微服务启动入口类
  * @Date:Created in 2020/3/1 20:03.
  */
+@EnableDiscoveryClient
 @SpringBootApplication//声明为StringBootApplication
 @EntityScan("com.xedu.framework.domain.cms")//扫描实体类
 @ComponentScan(basePackages = {"com.xedu.api"})//扫描接口

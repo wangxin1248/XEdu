@@ -12,6 +12,11 @@
 
     <artifactId>service-manage-cms</artifactId>
     <dependencies>
+        <!-- 导入Eureka客户端的依赖 -->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+        </dependency>
         <dependency>
             <groupId>com.xedu</groupId>
             <artifactId>service-api</artifactId>

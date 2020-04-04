@@ -2,6 +2,7 @@ package com.xedu.api.course;
 
 import com.xedu.framework.domain.course.CourseBase;
 import com.xedu.framework.domain.course.CourseMarket;
+import com.xedu.framework.domain.course.CoursePic;
 import com.xedu.framework.domain.course.Teachplan;
 import com.xedu.framework.domain.course.ext.CategoryNode;
 import com.xedu.framework.domain.course.ext.CourseInfo;
@@ -36,4 +37,10 @@ public interface CourseControllerApi {
     public CourseMarket getCourseMarketById(String courseId);
     @ApiOperation("更新课程营销信息")
     public ResponseResult updateCourseMarket(String id,CourseMarket courseMarket);
+    @ApiOperation("保存课程图片")
+    public ResponseResult addCoursePic(String courseId,String pic);
+    @ApiOperation("获取课程图片信息")
+    public CoursePic findCoursePic(String courseId);
+    @ApiOperation("删除课程图片")
+    public ResponseResult deleteCoursePic(String courseId);
 }

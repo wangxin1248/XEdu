@@ -40,7 +40,7 @@
       setuploaddata(){
 
       },
-      //删除图片
+      //删除图片回调方法
       handleRemove(file, fileList) {
         console.log(file)
         //调用服务端去删除课程图片信息，如果返回false，前端停止删除
@@ -48,18 +48,16 @@
         return new Promise((resolve,rejct)=>{
           courseApi.deleteCoursePic(this.courseid).then(res=>{
             if(res.success){
-
                 //成功
+              this.$message.error("删除成功");
               resolve()
             }else{
               this.$message.error("删除失败");
                 //失败
               rejct()
             }
-
           })
         })
-
       },
       //上传成功的钩子方法
       handleSuccess(response, file, fileList){
@@ -107,7 +105,7 @@
     mounted(){
       //课程id
       this.courseid = this.$route.params.courseid;
-      //查询课程
+      //查询课程图片url
       courseApi.findCoursePicList(this.courseid).then(res=>{
           if(res && res.pic){
               let imgUrl = this.imgUrl+res.pic;

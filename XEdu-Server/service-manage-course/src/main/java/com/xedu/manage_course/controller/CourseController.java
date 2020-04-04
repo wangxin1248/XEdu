@@ -3,6 +3,7 @@ package com.xedu.manage_course.controller;
 import com.xedu.api.course.CourseControllerApi;
 import com.xedu.framework.domain.course.CourseBase;
 import com.xedu.framework.domain.course.CourseMarket;
+import com.xedu.framework.domain.course.CoursePic;
 import com.xedu.framework.domain.course.Teachplan;
 import com.xedu.framework.domain.course.ext.CourseInfo;
 import com.xedu.framework.domain.course.ext.TeachplanNode;
@@ -80,5 +81,27 @@ public class CourseController implements CourseControllerApi {
     @PutMapping("/coursemarket/update/{courseId}")
     public ResponseResult updateCourseMarket(@PathVariable("courseId")String id, @RequestBody CourseMarket courseMarket) {
         return courseService.updateCourseMarket(id,courseMarket);
+    }
+
+    // 保存课程图片信息
+    // post 中传递过来的参数使用RequestParam来接收
+    @Override
+    @PostMapping("/coursepic/add")
+    public ResponseResult addCoursePic(@RequestParam("courseId") String courseId, @RequestParam("pic") String pic) {
+        return courseService.addCoursePic(courseId,pic);
+    }
+
+    // 查询课程图片
+    @Override
+    @GetMapping("/coursepic/list/{courseId}")
+    public CoursePic findCoursePic(@PathVariable("courseId") String courseId) {
+        return courseService.findCoursePic(courseId);
+    }
+
+    // 删除课程图片
+    @Override
+    @DeleteMapping("/coursepic/delete")
+    public ResponseResult deleteCoursePic(@RequestParam("courseId") String courseId) {
+        return courseService.deleteCoursePic(courseId);
     }
 }
