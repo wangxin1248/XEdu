@@ -8,3 +8,13 @@
     "siteCreateTime" : ISODate("2018-02-03T02:34:19.113+0000"), 
     "sitePhysicalPath" : "/Users/wx/project/XEduCode/XEdu-UI/ui-pc-static-portal/"
 }
+{ 
+    "_id" : ObjectId("5e8c457b578d1f472b7a7d29"), 
+    "_class" : "com.xedu.framework.domain.cms.CmsSite", 
+    "siteName" : "课程详情页面", 
+    "siteDomain" : "http://www.xedu.com", 
+    "sitePort" : "80", 
+    "siteWebPath" : "/", 
+    "siteCreateTime" : ISODate("2018-02-03T02:34:19.113+0000"), 
+    "sitePhysicalPath" : "/Users/wx/project/XEduCode/XEdu-UI/xedu/static/"
+}

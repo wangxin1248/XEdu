@@ -24,13 +24,13 @@
             <div v-else-if="course.status == '202003'">
               状态：已下线
               <br/><br/>
-              <span><a :href="'http://www.xuecheng.com/course/detail/'+this.courseid+'.html'" target="_blank">点我查看课程详情页面 </a> </span>
+              <span><a :href="'http://www.xedu.com/course/detail/'+this.courseid+'.html'" target="_blank">点我查看课程详情页面 </a> </span>
             </div>
             <div v-else-if="course.status == '202002'">
               状态：已发布<br/>
               <el-button type="primary"  @click.native="publish" >修改发布</el-button>
               <br/><br/>
-              <span><a :href="'http://www.xuecheng.com/course/detail/'+this.courseid+'.html'" target="_blank">点我查看课程详情页面 </a> </span>
+              <span><a :href="'http://www.xedu.com/course/detail/'+this.courseid+'.html'" target="_blank">点我查看课程详情页面 </a> </span>
             </div>
           </div>
         </el-card>
@@ -59,7 +59,7 @@ export default{
         //调用课程管理服务的预览接口，得到课程预览url
       courseApi.preview(this.courseid).then((res) => {
         if(res.success){
-          this.$message.error('预览页面生成成功，请点击下方预览链接');
+          this.$message.success('预览页面生成成功，请点击下方预览链接');
           if(res.previewUrl){
             //预览url
             this.previewurl = res.previewUrl
@@ -74,7 +74,6 @@ export default{
       courseApi.publish(this.courseid).then(res=>{
           if(res.success){
               this.$message.success("发布成功，请点击下边的链接查询课程详情页面")
-
           }else{
             this.$message.error(res.message)
           }

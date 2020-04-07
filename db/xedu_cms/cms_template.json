@@ -70,3 +70,11 @@
     "templateParameter" : "", 
     "templateFileId" : "5e6e295d3e824393be0fd0b9"
 }
+{ 
+    "_id" : ObjectId("5e8c25fa578d1f472b7a7d23"), 
+    "_class" : "com.xedu.framework.domain.cms.CmsTemplate", 
+    "siteId" : "5a751fab6abb5044e0d19ea1", 
+    "templateName" : "课程详情页面测试1", 
+    "templateParameter" : "courseid", 
+    "templateFileId" : "5e8c2512b0ea1771896d380f"
+}

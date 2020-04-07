@@ -6,8 +6,10 @@ import com.xedu.framework.domain.course.CoursePic;
 import com.xedu.framework.domain.course.Teachplan;
 import com.xedu.framework.domain.course.ext.CategoryNode;
 import com.xedu.framework.domain.course.ext.CourseInfo;
+import com.xedu.framework.domain.course.ext.CourseView;
 import com.xedu.framework.domain.course.ext.TeachplanNode;
 import com.xedu.framework.domain.course.request.CourseListRequest;
+import com.xedu.framework.domain.course.request.CoursePublishResult;
 import com.xedu.framework.domain.course.response.AddCourseResult;
 import com.xedu.framework.model.response.QueryResponseResult;
 import com.xedu.framework.model.response.ResponseResult;
@@ -43,4 +45,8 @@ public interface CourseControllerApi {
     public CoursePic findCoursePic(String courseId);
     @ApiOperation("删除课程图片")
     public ResponseResult deleteCoursePic(String courseId);
+    @ApiOperation("课程视图查询")
+    public CourseView courseview(String id);
+    @ApiOperation("预览课程")
+    public CoursePublishResult preview(String id);
 }

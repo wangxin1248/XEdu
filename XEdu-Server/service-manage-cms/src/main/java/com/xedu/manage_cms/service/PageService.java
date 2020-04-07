@@ -404,4 +404,20 @@ public class PageService {
         cmsPageRepository.save(cmsPage);
         return cmsPage;
     }
+
+    /**
+     * 保存页面信息
+     * @param page 页面信息对象
+     * @return 页面信息结果
+     */
+    public CmsPageResult save(CmsPage page) {
+        // 该对象存在则更新
+        CmsPage one = cmsPageRepository.findByPageNameAndSiteIdAndPageWebPath(page.getPageName(),page.getSiteId(),page.getPageWebPath());
+        if(one != null){
+            return updatePage(one.getPageId(),page);
+        }else{
+            // 不存在则添加
+            return addPage(page);
+        }
+    }
 }

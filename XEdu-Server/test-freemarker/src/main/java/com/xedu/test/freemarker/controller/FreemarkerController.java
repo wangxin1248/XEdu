@@ -49,11 +49,21 @@ public class FreemarkerController {
         return "test01";
     }
 
+    // 测试生成轮播图模版页面
     @RequestMapping("/banner")
     public String index_banner(Map<String,Object> map){
         ResponseEntity<Map> responseEntity = restTemplate.getForEntity("http://localhost:31001/cms/config/getmodel/5a791725dd573c3574ee333f", Map.class);
         Map res = responseEntity.getBody();
         map.putAll(res);
         return "index_banner";
+    }
+
+    // 测试生成课程详情模版页面
+    @RequestMapping("/course")
+    public String course(Map<String,Object> map){
+        ResponseEntity<Map> responseEntity = restTemplate.getForEntity("http://localhost:31200/course/courseview/4028e581617f945f01617f9dabc40000", Map.class);
+        Map res = responseEntity.getBody();
+        map.putAll(res);
+        return "course";
     }
 }

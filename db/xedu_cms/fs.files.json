@@ -1651,3 +1651,11 @@
     "uploadDate" : ISODate("2020-03-22T07:20:09.897+0000"), 
     "md5" : "65504c09c131eeb2339f756ec6da0ece"
 }
+{ 
+    "_id" : ObjectId("5e8c2512b0ea1771896d380f"), 
+    "filename" : "课程详情模板文件", 
+    "length" : NumberLong(41369), 
+    "chunkSize" : NumberInt(261120), 
+    "uploadDate" : ISODate("2020-04-07T07:00:34.606+0000"), 
+    "md5" : "e822ce22ae1c4f1a579f7826c08c532a"
+}

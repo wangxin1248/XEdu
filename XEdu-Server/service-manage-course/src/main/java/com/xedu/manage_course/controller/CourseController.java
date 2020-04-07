@@ -6,8 +6,10 @@ import com.xedu.framework.domain.course.CourseMarket;
 import com.xedu.framework.domain.course.CoursePic;
 import com.xedu.framework.domain.course.Teachplan;
 import com.xedu.framework.domain.course.ext.CourseInfo;
+import com.xedu.framework.domain.course.ext.CourseView;
 import com.xedu.framework.domain.course.ext.TeachplanNode;
 import com.xedu.framework.domain.course.request.CourseListRequest;
+import com.xedu.framework.domain.course.request.CoursePublishResult;
 import com.xedu.framework.domain.course.response.AddCourseResult;
 import com.xedu.framework.model.response.QueryResponseResult;
 import com.xedu.framework.model.response.ResponseResult;
@@ -103,5 +105,19 @@ public class CourseController implements CourseControllerApi {
     @DeleteMapping("/coursepic/delete")
     public ResponseResult deleteCoursePic(@RequestParam("courseId") String courseId) {
         return courseService.deleteCoursePic(courseId);
+    }
+
+    // 预览课程所需模型信息
+    @Override
+    @GetMapping("/courseview/{id}")
+    public CourseView courseview(@PathVariable("id") String id) {
+        return courseService.courseview(id);
+    }
+
+    // 课程预览接口
+    @Override
+    @PostMapping("/preview/{id}")
+    public CoursePublishResult preview(@PathVariable("id") String id) {
+        return courseService.preview(id);
     }
 }

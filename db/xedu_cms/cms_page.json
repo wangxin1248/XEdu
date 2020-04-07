@@ -423,3 +423,49 @@
     "dataUrl" : "http://localhost:31001/cms/config/getmodel/5a791725dd573c3574ee333f", 
     "_class" : "com.xedu.framework.domain.cms.CmsPage"
 }
+{ 
+    "_id" : ObjectId("5e8c4660578d1f472b7a7d40"), 
+    "_class" : "com.xedu.framework.domain.cms.CmsPage", 
+    "siteId" : "5e8c457b578d1f472b7a7d29", 
+    "pageName" : "Bootstraptest.html", 
+    "pageAliase" : "Bootstrap开发框架", 
+    "pageWebPath" : "/course/", 
+    "pagePhysicalPath" : "preview/", 
+    "pageType" : "1", 
+    "pageCreateTime" : ISODate("2018-04-21T02:41:28.471+0000"), 
+    "templateId" : "5e8c25fa578d1f472b7a7d23", 
+    "dataUrl" : "http://localhost:31200/course/courseview/4028e581617f945f01617f9dabc40000"
+}
+{ 
+    "_id" : ObjectId("5e8c6815b0ea178e6ddc1ce9"), 
+    "siteId" : "5e8c457b578d1f472b7a7d29", 
+    "pageName" : "4028e581617f945f01617f9dabc40000.html", 
+    "pageAliase" : "Bootstrap开发框架", 
+    "pageWebPath" : "/course/detail/", 
+    "pagePhysicalPath" : "/course/detail/", 
+    "templateId" : "5e8c25fa578d1f472b7a7d23", 
+    "dataUrl" : "http://localhost:31200/course/courseview/4028e581617f945f01617f9dabc40000", 
+    "_class" : "com.xedu.framework.domain.cms.CmsPage"
+}
+{ 
+    "_id" : ObjectId("5e8c6dbab0ea1790941bb0c0"), 
+    "siteId" : "5e8c457b578d1f472b7a7d29", 
+    "pageName" : "402847eb71205ec501712061978c0001.html", 
+    "pageAliase" : "Docker进阶", 
+    "pageWebPath" : "/course/detail/", 
+    "pagePhysicalPath" : "/course/detail/", 
+    "templateId" : "5e8c25fa578d1f472b7a7d23", 
+    "dataUrl" : "http://localhost:31200/course/courseview/402847eb71205ec501712061978c0001", 
+    "_class" : "com.xedu.framework.domain.cms.CmsPage"
+}
+{ 
+    "_id" : ObjectId("5e8c6e3ab0ea1790941bb0c1"), 
+    "siteId" : "5e8c457b578d1f472b7a7d29", 
+    "pageName" : "297e7c7c62b8aa9d0162b8ab13910000.html", 
+    "pageAliase" : "java基础3", 
+    "pageWebPath" : "/course/detail/", 
+    "pagePhysicalPath" : "/course/detail/", 
+    "templateId" : "5e8c25fa578d1f472b7a7d23", 
+    "dataUrl" : "http://localhost:31200/course/courseview/297e7c7c62b8aa9d0162b8ab13910000", 
+    "_class" : "com.xedu.framework.domain.cms.CmsPage"
+}

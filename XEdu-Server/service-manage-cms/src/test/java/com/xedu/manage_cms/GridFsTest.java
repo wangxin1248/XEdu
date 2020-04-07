@@ -37,11 +37,11 @@ public class GridFsTest {
     @Test
     public void write2GridFs() throws FileNotFoundException {
         // 所要存储的文件
-        File file = new File("/Users/wx/project/XEduCode/XEdu-Server/test-freemarker/src/main/resources/templates/index_banner.ftl");
+        File file = new File("/Users/wx/project/XEduCode/XEdu-UI/xedu/template/course.ftl");
         // 定义输入流
         FileInputStream inputStream = new FileInputStream(file);
         // 通过GridFsTemplate写入流数据
-        ObjectId objectId = gridFsTemplate.store(inputStream,"轮播图测试文件");
+        ObjectId objectId = gridFsTemplate.store(inputStream,"课程详情模板文件");
         System.out.println(objectId);
     }
 
