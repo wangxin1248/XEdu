@@ -4,6 +4,7 @@ import com.github.pagehelper.Page;
 import com.github.pagehelper.PageHelper;
 import com.xedu.framework.domain.cms.CmsPage;
 import com.xedu.framework.domain.cms.response.CmsPageResult;
+import com.xedu.framework.domain.cms.response.CmsPostPageResult;
 import com.xedu.framework.domain.course.CourseBase;
 import com.xedu.framework.domain.course.CourseMarket;
 import com.xedu.framework.domain.course.CoursePic;
@@ -443,5 +444,49 @@ public class CourseService {
         // 预览url
         String url = previewUrl+pageId;
         return new CoursePublishResult(CommonCode.SUCCESS,url);
+    }
+
+    /**
+     * 课程发布实现
+     * @param id 课程id
+     * @return 课程发布结果
+     */
+    @Transactional
+    public CoursePublishResult publish(String id) {
+        // 构建cms对象
+        CourseBase one = findCourseBaseById(id);//获取页面对象信息
+        // 首先创建对应的cmspage对象
+        CmsPage cmsPage = new CmsPage();
+        cmsPage.setSiteId(publish_siteId);//站点id
+        cmsPage.setTemplateId(publish_templateId);//模版id
+        cmsPage.setPageName(id+".html");//页面名称
+        cmsPage.setPageAliase(one.getName());//页面别名
+        cmsPage.setPageWebPath(publish_page_webpath);//web路径
+        cmsPage.setPagePhysicalPath(publish_page_physicalpath);//物理路径
+        cmsPage.setDataUrl(publish_dataUrlPre+id);//data url
+        // 远程调用 cms 的课程一键发布接口
+        CmsPostPageResult cmsPostPageResult = cmsPageClient.postPageQuick(cmsPage);
+        // 更改当前课程的状态
+        CourseBase courseBase = saveCoursePubState(id);
+        if(courseBase == null){
+            ExceptionCast.cast(CommonCode.FAIL);
+        }
+        // TODO:课程索引
+        // TODO:课程缓存
+        // 返回课程发布结果
+        String pageUrl = cmsPostPageResult.getPageUrl();
+        return new CoursePublishResult(CommonCode.SUCCESS,pageUrl);
+    }
+
+    /**
+     * 更改课程状态信息
+     * @param id 课程id
+     * @return 课程对象
+     */
+    private CourseBase saveCoursePubState(String id) {
+        CourseBase courseBase = this.findCourseBaseById(id);
+        courseBase.setStatus("202002");//数据字典中的课程状态
+        CourseBase one = courseBaseRepository.save(courseBase);
+        return one;
     }
 }

@@ -2,6 +2,7 @@ package com.xedu.manage_course.client;
 
 import com.xedu.framework.domain.cms.CmsPage;
 import com.xedu.framework.domain.cms.response.CmsPageResult;
+import com.xedu.framework.domain.cms.response.CmsPostPageResult;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -21,4 +22,7 @@ public interface CmsPageClient {
     // 保存界面信息
     @PostMapping("/cms/page/save")
     public CmsPageResult savePage(@RequestBody CmsPage page);
+    // 发布课程页面
+    @PostMapping("/cms/page/postPageQuick")
+    public CmsPostPageResult postPageQuick(@RequestBody CmsPage cmsPage);
 }

@@ -17,6 +17,7 @@
         <module>../test-fastdfs</module>
         <module>../service-base-ﬁlesystem</module>
         <module>../govern-center</module>
+        <module>../service-search</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>

@@ -3,6 +3,7 @@ package com.xedu.api.cms;
 import com.xedu.framework.domain.cms.CmsPage;
 import com.xedu.framework.domain.cms.request.QueryPageRequest;
 import com.xedu.framework.domain.cms.response.CmsPageResult;
+import com.xedu.framework.domain.cms.response.CmsPostPageResult;
 import com.xedu.framework.model.response.QueryResponseResult;
 import com.xedu.framework.model.response.ResponseResult;
 import io.swagger.annotations.Api;
@@ -49,5 +50,8 @@ public interface CmsPageControllerApi {
     // 保存页面方法
     @ApiOperation("保存页面接口")
     public CmsPageResult savePage(CmsPage page);
+
+    @ApiOperation("一键发布页面")
+    public CmsPostPageResult postPageQuick(CmsPage cmsPage);
 }
 

@@ -74,6 +74,8 @@ export default{
       courseApi.publish(this.courseid).then(res=>{
           if(res.success){
               this.$message.success("发布成功，请点击下边的链接查询课程详情页面")
+              // 发布成功之后查询课程信息，看课程信息是否有变化
+              this.getCourseView();
           }else{
             this.$message.error(res.message)
           }

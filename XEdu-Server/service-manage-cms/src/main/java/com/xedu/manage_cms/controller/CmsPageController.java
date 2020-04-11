@@ -4,6 +4,7 @@ import com.xedu.api.cms.CmsPageControllerApi;
 import com.xedu.framework.domain.cms.CmsPage;
 import com.xedu.framework.domain.cms.request.QueryPageRequest;
 import com.xedu.framework.domain.cms.response.CmsPageResult;
+import com.xedu.framework.domain.cms.response.CmsPostPageResult;
 import com.xedu.framework.model.response.CommonCode;
 import com.xedu.framework.model.response.QueryResponseResult;
 import com.xedu.framework.model.response.QueryResult;
@@ -96,5 +97,12 @@ public class CmsPageController implements CmsPageControllerApi {
     @PostMapping("/save")
     public CmsPageResult savePage(@RequestBody CmsPage page) {
         return pageService.save(page);
+    }
+
+    // 一键发布课程页面
+    @Override
+    @PostMapping("/postPageQuick")
+    public CmsPostPageResult postPageQuick(@RequestBody CmsPage cmsPage) {
+        return pageService.postPageQuick(cmsPage);
     }
 }

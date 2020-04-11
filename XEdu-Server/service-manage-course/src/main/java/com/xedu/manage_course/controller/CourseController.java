@@ -120,4 +120,11 @@ public class CourseController implements CourseControllerApi {
     public CoursePublishResult preview(@PathVariable("id") String id) {
         return courseService.preview(id);
     }
+
+    // 课程发布接口
+    @Override
+    @PostMapping("/publish/{id}")
+    public CoursePublishResult publish(@PathVariable("id") String id) {
+        return courseService.publish(id);
+    }
 }

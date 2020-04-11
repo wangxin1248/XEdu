@@ -15,5 +15,5 @@ spring:
     virtualHost: /
 xedu:
   mq:
-    queue: queue_cms_postpage_01 #cms客户端监控的队列名称（不同的客户端监控的队列不能重复）
-    routingKey: 5a751fab6abb5044e0d19ea1 #此routingKey为门户站点ID
+    queue: queue_cms_postpage_02 #cms客户端监控的队列名称（不同的客户端监控的队列不能重复）
+    routingKey: 5e8c457b578d1f472b7a7d29 #此routingKey为门户站点ID

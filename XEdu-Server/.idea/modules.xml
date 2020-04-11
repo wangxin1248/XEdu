@@ -13,6 +13,7 @@
       <module fileurl="file://$PROJECT_DIR$/service-manage-cms/service-manage-cms.iml" filepath="$PROJECT_DIR$/service-manage-cms/service-manage-cms.iml" />
       <module fileurl="file://$PROJECT_DIR$/service-manage-cms-client/service-manage-cms-client.iml" filepath="$PROJECT_DIR$/service-manage-cms-client/service-manage-cms-client.iml" />
       <module fileurl="file://$PROJECT_DIR$/service-manage-course/service-manage-course.iml" filepath="$PROJECT_DIR$/service-manage-course/service-manage-course.iml" />
+      <module fileurl="file://$PROJECT_DIR$/service-search/service-search.iml" filepath="$PROJECT_DIR$/service-search/service-search.iml" />
       <module fileurl="file://$PROJECT_DIR$/test-fastdfs/test-fastdfs.iml" filepath="$PROJECT_DIR$/test-fastdfs/test-fastdfs.iml" />
       <module fileurl="file://$PROJECT_DIR$/test-freemarker/test-freemarker.iml" filepath="$PROJECT_DIR$/test-freemarker/test-freemarker.iml" />
       <module fileurl="file://$PROJECT_DIR$/test-rabbitmq-consumer/test-rabbitmq-consumer.iml" filepath="$PROJECT_DIR$/test-rabbitmq-consumer/test-rabbitmq-consumer.iml" />
