@@ -37,7 +37,7 @@ import static org.elasticsearch.common.xcontent.XContentFactory.jsonBuilder;
  */
 @SpringBootTest
 @RunWith(SpringRunner.class)
-public class TestSearch {
+public class TestElasticS {
     // 注入对应的es客户端，优先使用高等级客户端
     @Autowired
     RestHighLevelClient restHighLevelClient;

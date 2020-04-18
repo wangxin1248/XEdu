@@ -64,6 +64,8 @@ export default{
             //预览url
             this.previewurl = res.previewUrl
           }
+          // 发布成功之后查询课程信息，看课程信息是否有变化
+          this.getCourseView();
         }else{
           this.$message.error(res.message);
         }
