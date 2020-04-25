@@ -95,7 +95,7 @@ public class EsCourseService {
             page = 1;
         }
         if(size<=0){
-            size = 20;
+            size = 12;
         }
         int start = (page-1)*size;
         searchSourceBuilder.from(start);
@@ -131,6 +131,9 @@ public class EsCourseService {
             CoursePub coursePub = new CoursePub();
             // 获取原始数据文档
             Map<String, Object> sourceAsMap = hit.getSourceAsMap();
+            // 取出id
+            String id = (String) sourceAsMap.get("id");
+            coursePub.setId(id);
             // 取出name
             String name = (String) sourceAsMap.get("name");
             // 取出高亮字段内容
@@ -150,6 +153,9 @@ public class EsCourseService {
             // 取出pic
             String pic = (String) sourceAsMap.get("pic");
             coursePub.setPic(pic);
+            // 取出charge
+            String charge = (String) sourceAsMap.get("charge");
+            coursePub.setCharge(charge);
             // 取出价格
             Double price = null;
             try {
