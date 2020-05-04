@@ -18,6 +18,7 @@
         <module>../service-base-ﬁlesystem</module>
         <module>../govern-center</module>
         <module>../service-search</module>
+        <module>../service-manage-media</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>

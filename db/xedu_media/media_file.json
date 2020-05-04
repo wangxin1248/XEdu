@@ -1,0 +1,12 @@
+{ 
+    "_id" : "c5c75d70f382e6016d2f506d134eee11", 
+    "fileName" : "c5c75d70f382e6016d2f506d134eee11.avi", 
+    "fileOriginalName" : "lucene.avi", 
+    "filePath" : "c/5/c5c75d70f382e6016d2f506d134eee11/c5c75d70f382e6016d2f506d134eee11.avi", 
+    "fileType" : "avi", 
+    "mimeType" : "video/avi", 
+    "fileSize" : NumberLong(52553728), 
+    "fileStatus" : "301002", 
+    "uploadTime" : ISODate("2020-05-04T05:27:39.270+0000"), 
+    "_class" : "com.xedu.framework.domain.media.MediaFile"
+}

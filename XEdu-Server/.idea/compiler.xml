@@ -15,6 +15,7 @@
         <module name="test-rabbitmq-producer" />
         <module name="framework-model" />
         <module name="framework-utils" />
+        <module name="service-manage-media" />
         <module name="service-search" />
         <module name="test-fastdfs" />
         <module name="framework-common" />
@@ -34,6 +35,7 @@
       <module name="service-manage-cms" target="1.8" />
       <module name="service-manage-cms-client" target="1.8" />
       <module name="service-manage-course" target="1.8" />
+      <module name="service-manage-media" target="1.8" />
       <module name="service-search" target="1.8" />
       <module name="test-fastdfs" target="1.8" />
       <module name="test-freemarker" target="1.8" />
@@ -53,6 +55,7 @@
       <module name="service-manage-cms" options="-parameters" />
       <module name="service-manage-cms-client" options="-parameters" />
       <module name="service-manage-course" options="-parameters" />
+      <module name="service-manage-media" options="-parameters" />
       <module name="service-search" options="-parameters" />
       <module name="test-fastdfs" options="-parameters" />
       <module name="test-freemarker" options="-parameters" />
