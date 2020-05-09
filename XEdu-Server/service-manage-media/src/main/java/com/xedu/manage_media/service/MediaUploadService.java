@@ -1,14 +1,17 @@
 package com.xedu.manage_media.service;
 
+import com.alibaba.fastjson.JSON;
 import com.xedu.framework.domain.media.MediaFile;
 import com.xedu.framework.domain.media.response.CheckChunkResult;
 import com.xedu.framework.domain.media.response.MediaCode;
 import com.xedu.framework.exception.ExceptionCast;
 import com.xedu.framework.model.response.CommonCode;
 import com.xedu.framework.model.response.ResponseResult;
+import com.xedu.manage_media.config.RabbitMQConfig;
 import com.xedu.manage_media.dao.MediaFileRepository;
 import org.apache.commons.codec.digest.DigestUtils;
 import org.apache.commons.io.IOUtils;
+import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
@@ -30,6 +33,12 @@ public class MediaUploadService {
     // 获取文件上传主目录
     @Value("${service-manage-media.upload-location}")
     String upload_location;
+    @Value("${service-manage-media.mq.routingkey-media-video}")
+    String routingkey_media_video;
+    @Autowired
+    RabbitTemplate rabbitTemplate;
+
+
     /**
      * 文件注册
      * 根据文件md5得到文件路径
@@ -78,8 +87,14 @@ public class MediaUploadService {
         return this.getFileFolderPath(fileMd5) + fileMd5 + "." + fileExt;
     }
 
+    /**
+     * 根据文件的md5获取文件的绝对路径
+     * @param fileMd5
+     * @param fileExt
+     * @return
+     */
     private String getFileRelativePath(String fileMd5, String fileExt){
-        return fileMd5.substring(0,1) + "/" + fileMd5.substring(1,2) + "/" + fileMd5 + "/" + fileMd5+"."+fileExt;
+        return fileMd5.substring(0,1) + "/" + fileMd5.substring(1,2) + "/" + fileMd5 + "/";
     }
 
     /**
@@ -208,6 +223,27 @@ public class MediaUploadService {
         mediaFile.setFileType(fileExt);//文件扩展名
         mediaFile.setFileStatus("301002");//文件上传状态
         mediaFileRepository.save(mediaFile);
+        // 发送消息通知执行视频处理任务
+        return sendProcessVideoMsg(mediaFile.getFileId());
+    }
+
+    /**
+     * 发送消息通知执行视频处理任务
+     * @param mediaId
+     * @return
+     */
+    public ResponseResult sendProcessVideoMsg(String mediaId){
+        // 构建消息发送内容
+        Map<String, String> map = new HashMap<>();
+        map.put("mediaId",mediaId);
+        // 将消息内容转换为json
+        String jsonString = JSON.toJSONString(map);
+        try {
+            rabbitTemplate.convertAndSend(RabbitMQConfig.EX_MEDIA_PROCESSTASK, routingkey_media_video, jsonString);
+        } catch (Exception e){
+            e.printStackTrace();
+            return new ResponseResult(CommonCode.FAIL);
+        }
         return new ResponseResult(CommonCode.SUCCESS);
     }
 

@@ -191,7 +191,7 @@
       //上传成功触发
       this.uploader.on("uploadSuccess", function(file,response ) {
         console.log(response)
-//        alert("上传文件成功！");
+       alert("上传文件成功！");
       });
       //每个分块上传请求后触发
       this.uploader.on( 'uploadAccept', function( file, response ) {

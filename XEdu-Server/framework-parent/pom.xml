@@ -19,6 +19,7 @@
         <module>../govern-center</module>
         <module>../service-search</module>
         <module>../service-manage-media</module>
+        <module>../service-manage-media-processor</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>

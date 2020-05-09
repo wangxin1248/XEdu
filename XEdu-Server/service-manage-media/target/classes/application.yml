@@ -7,7 +7,16 @@ spring:
     mongodb:
       uri:  mongodb://root:wx123456@192.168.116.129:27017
       database: xedu_media
+  #rabbitmq配置
+  rabbitmq:
+    host: 192.168.116.129
+    port: 5672
+    username: admin
+    password: admin
+    virtualHost: /
 service-manage-media:
+  mq:
+    routingkey-media-video: routingkey_media_video
   upload-location: /Users/wx/project/XEduCode/XEdu-UI/video/
 eureka:
   client:
