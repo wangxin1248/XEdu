@@ -1,10 +1,7 @@
 package com.xedu.manage_course.controller;
 
 import com.xedu.api.course.CourseControllerApi;
-import com.xedu.framework.domain.course.CourseBase;
-import com.xedu.framework.domain.course.CourseMarket;
-import com.xedu.framework.domain.course.CoursePic;
-import com.xedu.framework.domain.course.Teachplan;
+import com.xedu.framework.domain.course.*;
 import com.xedu.framework.domain.course.ext.CourseInfo;
 import com.xedu.framework.domain.course.ext.CourseView;
 import com.xedu.framework.domain.course.ext.TeachplanNode;
@@ -126,5 +123,12 @@ public class CourseController implements CourseControllerApi {
     @PostMapping("/publish/{id}")
     public CoursePublishResult publish(@PathVariable("id") String id) {
         return courseService.publish(id);
+    }
+
+    // 保存课程计划和媒资文件相关联信息
+    @Override
+    @PostMapping("/savemedia")
+    public ResponseResult savemedia(@RequestBody TeachplanMedia teachplanMedia) {
+        return courseService.savemedia(teachplanMedia);
     }
 }

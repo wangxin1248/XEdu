@@ -111,6 +111,7 @@ public class MediaProcessTask {
         // 设置m3u8路径
         String m3u8_path = mediaFile.getFilePath() + m3u8_name;
         mediaFile.setFileUrl(m3u8_path);
+        mediaFile.setProcessStatus("303002");
         // 保存文件信息到数据库，完成文件处理
         mediaFileRepository.save(mediaFile);
     }

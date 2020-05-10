@@ -1,9 +1,6 @@
 package com.xedu.api.course;
 
-import com.xedu.framework.domain.course.CourseBase;
-import com.xedu.framework.domain.course.CourseMarket;
-import com.xedu.framework.domain.course.CoursePic;
-import com.xedu.framework.domain.course.Teachplan;
+import com.xedu.framework.domain.course.*;
 import com.xedu.framework.domain.course.ext.CategoryNode;
 import com.xedu.framework.domain.course.ext.CourseInfo;
 import com.xedu.framework.domain.course.ext.CourseView;
@@ -52,4 +49,6 @@ public interface CourseControllerApi {
     public CoursePublishResult preview(String id);
     @ApiOperation("发布课程")
     public CoursePublishResult publish(String id);
+    @ApiOperation("保存媒资信息")
+    public ResponseResult savemedia(TeachplanMedia teachplanMedia);
 }

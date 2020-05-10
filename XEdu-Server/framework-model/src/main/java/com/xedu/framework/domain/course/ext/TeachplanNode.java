@@ -15,5 +15,8 @@ import java.util.List;
 public class TeachplanNode extends Teachplan {
 
     List<TeachplanNode> children;
+    // 媒资信息
+    private String mediaId;
+    private String mediaFileOriginalName;
 
 }

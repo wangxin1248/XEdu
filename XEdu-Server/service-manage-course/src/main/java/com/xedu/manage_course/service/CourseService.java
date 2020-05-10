@@ -13,6 +13,7 @@ import com.xedu.framework.domain.course.ext.TeachplanNode;
 import com.xedu.framework.domain.course.request.CourseListRequest;
 import com.xedu.framework.domain.course.request.CoursePublishResult;
 import com.xedu.framework.domain.course.response.AddCourseResult;
+import com.xedu.framework.domain.course.response.CourseCode;
 import com.xedu.framework.exception.ExceptionCast;
 import com.xedu.framework.model.response.CommonCode;
 import com.xedu.framework.model.response.QueryResponseResult;
@@ -57,6 +58,8 @@ public class CourseService {
     CmsPageClient cmsPageClient;
     @Autowired
     CoursePubRepository coursePubRepository;
+    @Autowired
+    TeachplanMediaRepository teachplanMediaRepository;
     // 注入配置文件信息
     @Value("${course-publish.dataUrlPre}")
     private String publish_dataUrlPre;
@@ -579,5 +582,49 @@ public class CourseService {
         courseBase.setStatus("202002");//数据字典中的课程状态
         CourseBase one = courseBaseRepository.save(courseBase);
         return one;
+    }
+
+    /**
+     * 保存课程计划和媒资文件相关联信息
+     * @param teachplanMedia
+     * @return
+     */
+    @Transactional
+    public ResponseResult savemedia(TeachplanMedia teachplanMedia) {
+        // 首先进行合法性验证
+        if(teachplanMedia == null || StringUtils.isEmpty(teachplanMedia.getTeachplanId())){
+            ExceptionCast.cast(CommonCode.INVALID_PARAM);
+        }
+        // 获取课程计划id
+        String teachplanId = teachplanMedia.getTeachplanId();
+        // 查询课程计划对象
+        Optional<Teachplan> optionalTeachplan = teachplanRepository.findById(teachplanId);
+        // 判断课程计划对象是否存在
+        if(!optionalTeachplan.isPresent()){
+            ExceptionCast.cast(CommonCode.INVALID_PARAM);
+        }
+        Teachplan teachplan = optionalTeachplan.get();
+        // 对课程计划进行判断，只有级别为3的课程计划才可以关联视频信息
+        if(teachplan == null || !teachplan.getGrade().equals("3")){
+            ExceptionCast.cast(CourseCode.COURSE_MEDIA_TEACHPLAN_GRADEERROR);
+        }
+        // 查询TeachplanMedia对象
+        TeachplanMedia one = null;
+        Optional<TeachplanMedia> teachplanMediaOptional = teachplanMediaRepository.findById(teachplanId);
+        // 数据库中已经存在TeachplanMedia对象则进行更新，否则执行新建保存
+        if(teachplanMediaOptional.isPresent()){
+            one = teachplanMediaOptional.get();
+        }else{
+            one = new TeachplanMedia();
+        }
+        // 更新TeachplanMedia对象属性
+        one.setTeachplanId(teachplanId);
+        one.setCourseId(teachplanMedia.getCourseId());
+        one.setMediaFileOriginalName(teachplanMedia.getMediaFileOriginalName());
+        one.setMediaId(teachplanMedia.getMediaId());
+        one.setMediaUrl(teachplanMedia.getMediaUrl());
+        teachplanMediaRepository.save(one);
+        // 返回结果
+        return new ResponseResult(CommonCode.SUCCESS);
     }
 }
