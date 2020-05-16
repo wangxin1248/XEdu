@@ -109,7 +109,7 @@ public class MediaProcessTask {
         mediaFileProcess_m3u8.setTslist(ts_list);
         mediaFile.setMediaFileProcess_m3u8(mediaFileProcess_m3u8);
         // 设置m3u8路径
-        String m3u8_path = mediaFile.getFilePath() + m3u8_name;
+        String m3u8_path = mediaFile.getFilePath() + "hls/" + m3u8_name;
         mediaFile.setFileUrl(m3u8_path);
         mediaFile.setProcessStatus("303002");
         // 保存文件信息到数据库，完成文件处理

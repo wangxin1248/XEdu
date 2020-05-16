@@ -204,7 +204,7 @@
             title:'测试',
             courseId:'',
             charge:'',//203001免费,203002收费
-            learnstatus:0,//课程状态，1：马上学习，2：立即报名、3：立即购买
+            learnstatus:1,//课程状态，1：马上学习，2：立即报名、3：立即购买
             course:{},
             companyId:'template',
             company_stat:[],
@@ -249,7 +249,7 @@
                         if(res.success){
                             this.$message.success('订单创建成功');
                             //跳转到支付页面
-                            window.location = "http://ucenter.xuecheng.com/#/pay/"+res.xcOrders.orderNumber
+                            window.location = "http://ucenter.xedu.com/#/pay/"+res.xcOrders.orderNumber
                         }else{
                             if(res.message){
                                 this.$message.error(res.message);

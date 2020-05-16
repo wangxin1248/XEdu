@@ -18,8 +18,8 @@ export const sys_deleteFile = params => {
 export const course_findByIds = ids => {
   return http.requestGet('/openapi/search/course/getbase/'+ids);
 }
+/*课程信息查询*/
 export const course_view = id => {
-  // return http.requestGet('/openapi/portalview/course/get/'+id);
   return http.requestGet('/openapi/search/course/getall/'+id);
 }
 /*获取jwt令牌*/

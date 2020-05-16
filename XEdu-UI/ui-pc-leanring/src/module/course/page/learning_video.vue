@@ -568,7 +568,17 @@
 
       //开始学习
       study(chapter){
-
+        // 获取课程对应的媒体信息
+        courseApi.get_media(this.courseId, chapter).then(res => {
+          if(res.success){
+            // 获取当前课程对应chapter的媒体播放地址
+            let fileUrl = res.fileUrl
+            // 拼接完整的视频播放地址
+            let videoUrl = sysConfig.videoUrl + fileUrl
+            // 播放视频
+            this.playvideo(videoUrl)
+          }
+        })
       }
 
     },
@@ -581,13 +591,51 @@
       this.chapter = this.$route.params.chapter
       //取出课程Id
       systemApi.course_view(this.courseId).then((view_course)=>{
-
-
+        // 打印出从后台查询到的课程信息
+        // console.log(view_course)
+        // 判断课程信息是否查询到
+        if(!view_course || !view_course[this.courseId]){
+          this.$message.error("获取课程信息失败，请重新进入此页面！")
+          return ;
+        }
+        // 获取课程信息
+        let courseInfo = view_course[this.courseId]
+        // 获取课程名称
+        this.coursename = courseInfo.name
+        // 获取课程计划
+        if(courseInfo.teachplan){
+          // 将课程计划转换为json
+          let teachplan = JSON.parse(courseInfo.teachplan);
+          // 绑定到数据对象上
+          this.teachplanList = teachplan.children;
+        }
+        // 判断当前的chapter是0还是其他
+        if(this.chapter != '0'){
+          // 直接播放该chapter对应的视频
+          this.study(this.chapter)
+        }else{
+          console.log(this.teachplanList)
+          // 播放该课程的第一个视频
+          // 遍历所有的课程计划
+          for(var i=0;i<this.teachplanList.length;i++){
+            // 取出第一层的课程计划
+            let firstTeachplan = this.teachplanList[i];
+            // 假如存在元素的话就是有对应的二级课程计划
+            if(firstTeachplan.children && firstTeachplan.children.length>0){
+              // 获取到二级课程计划的第一个课程计划
+              let secondteachplan = firstTeachplan.children[0];
+              // 获取他对应的id
+              let teachplanId = secondteachplan.id;
+              // 执行学习任务
+              this.study(teachplanId)
+            }
+          }
+        }
       })
     },
     mounted() {
       //播放测试
-      this.playvideo("http://video.xedu.com/video/lucene.m3u8")
+      // this.playvideo("http://video.xedu.com/video/hls/lucene.m3u8")
 //      this.playvideo("http://video.xuecheng.com/video/5/3/53ac4cca3ddf386c21f4f1cbb4dc9876/hls/53ac4cca3ddf386c21f4f1cbb4dc9876.m3u8")
       $(function() {
         $('.active-box span').click(function() {

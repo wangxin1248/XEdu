@@ -20,6 +20,7 @@
         <module name="service-search" />
         <module name="test-fastdfs" />
         <module name="framework-common" />
+        <module name="service-learning" />
         <module name="service-base-ﬁlesystem" />
         <module name="service-api" />
         <module name="test-freemarker" />
@@ -33,6 +34,7 @@
       <module name="govern-center" target="1.8" />
       <module name="service-api" target="1.8" />
       <module name="service-base-ﬁlesystem" target="1.8" />
+      <module name="service-learning" target="1.8" />
       <module name="service-manage-cms" target="1.8" />
       <module name="service-manage-cms-client" target="1.8" />
       <module name="service-manage-course" target="1.8" />
@@ -54,6 +56,7 @@
       <module name="govern-center" options="-parameters" />
       <module name="service-api" options="-parameters" />
       <module name="service-base-ﬁlesystem" options="-parameters" />
+      <module name="service-learning" options="-parameters" />
       <module name="service-manage-cms" options="-parameters" />
       <module name="service-manage-cms-client" options="-parameters" />
       <module name="service-manage-course" options="-parameters" />

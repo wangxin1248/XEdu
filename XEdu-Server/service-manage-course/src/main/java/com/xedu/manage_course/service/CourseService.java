@@ -30,6 +30,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import javax.management.remote.rmi._RMIConnection_Stub;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import java.util.Optional;
@@ -60,6 +61,8 @@ public class CourseService {
     CoursePubRepository coursePubRepository;
     @Autowired
     TeachplanMediaRepository teachplanMediaRepository;
+    @Autowired
+    TeachplanMediaPubRepository teachplanMediaPubRepository;
     // 注入配置文件信息
     @Value("${course-publish.dataUrlPre}")
     private String publish_dataUrlPre;
@@ -486,9 +489,32 @@ public class CourseService {
             ExceptionCast.cast(CommonCode.FAIL);
         }
         // TODO:课程缓存
+
+        // 保存课程媒资信息到课程媒资发布表中
+        saveTeachPlanMediaPub(id);
         // 返回课程发布结果
         String pageUrl = cmsPostPageResult.getPageUrl();
         return new CoursePublishResult(CommonCode.SUCCESS,pageUrl);
+    }
+
+    /**
+     * 保存课程媒资信息到课程媒资发布表中
+     * @param id
+     */
+    private void saveTeachPlanMediaPub(String id) {
+        // 查询课程的媒资信息
+        List<TeachplanMedia> teachplanMedias = teachplanMediaRepository.findByCourseId(id);
+        // 首先删除原先的课程媒资发布信息
+        teachplanMediaPubRepository.deleteByCourseId(id);
+        // 将课程的媒资信息保存到课程媒资发布表中
+        List<TeachplanMediaPub> teachplanMediaPubs = new ArrayList<>();
+        for(TeachplanMedia teachplanMedia : teachplanMedias){
+            TeachplanMediaPub teachplanMediaPub = new TeachplanMediaPub();
+            BeanUtils.copyProperties(teachplanMedia, teachplanMediaPub);
+            teachplanMediaPubs.add(teachplanMediaPub);
+        }
+        // 保存课程媒资发布信息
+        teachplanMediaPubRepository.saveAll(teachplanMediaPubs);
     }
 
     /**
