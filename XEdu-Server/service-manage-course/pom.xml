@@ -96,6 +96,10 @@
             <groupId>com.netflix.feign</groupId>
             <artifactId>feign-okhttp</artifactId>
         </dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-oauth2</artifactId>
+        </dependency>
     </dependencies>
 
 </project>

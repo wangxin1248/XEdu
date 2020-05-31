@@ -21,6 +21,7 @@
         <module>../service-manage-media</module>
         <module>../service-manage-media-processor</module>
         <module>../service-learning</module>
+        <module>../service-ucenter-auth</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
