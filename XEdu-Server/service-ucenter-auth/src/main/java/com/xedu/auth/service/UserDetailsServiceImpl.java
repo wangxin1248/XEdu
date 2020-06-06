@@ -25,6 +25,12 @@ public class UserDetailsServiceImpl implements UserDetailsService {
     @Autowired
     ClientDetailsService clientDetailsService;
 
+    /**
+     * 验证用户输入的账号和密码，该方法由spring security自动调用
+     * @param username
+     * @return
+     * @throws UsernameNotFoundException
+     */
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
         //取出身份，如果身份为空说明没有认证
@@ -41,6 +47,7 @@ public class UserDetailsServiceImpl implements UserDetailsService {
         if (StringUtils.isEmpty(username)) {
             return null;
         }
+        // 使用静态账号来进行测试
         XcUserExt userext = new XcUserExt();
         userext.setUsername("itcast");
         userext.setPassword(new BCryptPasswordEncoder().encode("123"));
@@ -60,14 +67,15 @@ public class UserDetailsServiceImpl implements UserDetailsService {
 //        user_permission.add("course_get_baseinfo");
 //        user_permission.add("course_find_pic");
         String user_permission_string  = StringUtils.join(user_permission.toArray(), ",");
+        // 构建 UserJwt 对象
         UserJwt userDetails = new UserJwt(username,
                 password,
                 AuthorityUtils.commaSeparatedStringToAuthorityList(user_permission_string));
         userDetails.setId(userext.getId());
-        userDetails.setUtype(userext.getUtype());//用户类型
-        userDetails.setCompanyId(userext.getCompanyId());//所属企业
-        userDetails.setName(userext.getName());//用户名称
-        userDetails.setUserpic(userext.getUserpic());//用户头像
+        userDetails.setUtype(userext.getUtype());// 用户类型
+        userDetails.setCompanyId(userext.getCompanyId());// 所属企业
+        userDetails.setName(userext.getName());// 用户名称
+        userDetails.setUserpic(userext.getUserpic());// 用户头像
        /* UserDetails userDetails = new org.springframework.security.core.userdetails.User(username,
                 password,
                 AuthorityUtils.commaSeparatedStringToAuthorityList(""));*/

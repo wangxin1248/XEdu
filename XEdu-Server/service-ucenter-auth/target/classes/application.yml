@@ -33,11 +33,11 @@ auth:
   tokenValiditySeconds: 1200  #token存储到redis的过期时间
   clientId: XcWebApp
   clientSecret: XcWebApp
-  cookieDomain: java.itcast.cn
+  cookieDomain: xedu.com
   cookieMaxAge: -1
 encrypt:
   key-store:
-    location: classpath:/xedu.keystore
+    location: classpath:/xc.keystore
     secret: xuechengkeystore
     alias: xckey
     password: xuecheng
