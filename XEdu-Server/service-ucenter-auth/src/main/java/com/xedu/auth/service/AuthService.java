@@ -151,7 +151,18 @@ public class AuthService {
         Map token_body = exchange.getBody();
         if (token_body == null ||
                 token_body.get("access_token") == null ||
-                    token_body.get("jti") == null){
+                token_body.get("refresh_token") == null ||
+                token_body.get("jti") == null){
+            // 进行错误信息验证
+            if(token_body != null && token_body.get("error_description") != null){
+                String error_desc = (String) token_body.get("error_description");
+                // 判断错误信息的分类
+                if(error_desc.indexOf("UserDetailsService returned null")>=0){
+                    ExceptionCast.cast(AuthCode.AUTH_ACCOUNT_NOTEXISTS);
+                }else if(error_desc.indexOf("坏的凭证")>=0){
+                    ExceptionCast.cast(AuthCode.AUTH_CREDENTIAL_ERROR);
+                }
+            }
             return null;
         }
         AuthToken authToken = new AuthToken();

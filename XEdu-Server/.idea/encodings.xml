@@ -20,6 +20,7 @@
     <file url="file://$PROJECT_DIR$/service-manage-media/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/service-search/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/service-ucenter-auth/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/service-ucenter/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/test-fastdfs/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/test-freemarker/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/test-rabbitmq-consumer/src/main/java" charset="UTF-8" />

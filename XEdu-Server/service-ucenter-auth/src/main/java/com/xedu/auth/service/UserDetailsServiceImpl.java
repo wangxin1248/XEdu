@@ -1,5 +1,6 @@
 package com.xedu.auth.service;
 
+import com.xedu.auth.client.UserClient;
 import com.xedu.framework.domain.ucenter.XcMenu;
 import com.xedu.framework.domain.ucenter.ext.XcUserExt;
 import org.apache.commons.lang3.StringUtils;
@@ -24,6 +25,8 @@ public class UserDetailsServiceImpl implements UserDetailsService {
 
     @Autowired
     ClientDetailsService clientDetailsService;
+    @Autowired
+    UserClient userClient;
 
     /**
      * 验证用户输入的账号和密码，该方法由spring security自动调用
@@ -47,19 +50,18 @@ public class UserDetailsServiceImpl implements UserDetailsService {
         if (StringUtils.isEmpty(username)) {
             return null;
         }
-        // 使用静态账号来进行测试
-        XcUserExt userext = new XcUserExt();
-        userext.setUsername("itcast");
-        userext.setPassword(new BCryptPasswordEncoder().encode("123"));
-        userext.setPermissions(new ArrayList<XcMenu>());
+
+        // 通过远程调用来查询用户的信息
+        XcUserExt userext = userClient.getUserext(username);
+        // 判断是否查询到用户信息
         if(userext == null){
             return null;
         }
-        //取出正确密码（hash值）
+        // TODO:用户授权未完成，这里使用静态权限数据
+        userext.setPermissions(new ArrayList<XcMenu>());
+        // 取出正确密码（hash值）
         String password = userext.getPassword();
-        //这里暂时使用静态密码
-//       String password ="123";
-        //用户权限，这里暂时使用静态数据，最终会从数据库读取
+
         //从数据库获取权限
         List<XcMenu> permissions = userext.getPermissions();
         List<String> user_permission = new ArrayList<>();

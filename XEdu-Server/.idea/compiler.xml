@@ -14,6 +14,7 @@
         <module name="service-ucenter-auth" />
         <module name="govern-center" />
         <module name="test-rabbitmq-consumer" />
+        <module name="service-ucenter" />
         <module name="test-rabbitmq-producer" />
         <module name="framework-model" />
         <module name="framework-utils" />
@@ -42,6 +43,7 @@
       <module name="service-manage-media" target="1.8" />
       <module name="service-manage-media-processor" target="1.8" />
       <module name="service-search" target="1.8" />
+      <module name="service-ucenter" target="1.8" />
       <module name="service-ucenter-auth" target="1.8" />
       <module name="test-fastdfs" target="1.8" />
       <module name="test-freemarker" target="1.8" />
@@ -65,6 +67,7 @@
       <module name="service-manage-media" options="-parameters" />
       <module name="service-manage-media-processor" options="-parameters" />
       <module name="service-search" options="-parameters" />
+      <module name="service-ucenter" options="-parameters" />
       <module name="service-ucenter-auth" options="-parameters" />
       <module name="test-fastdfs" options="-parameters" />
       <module name="test-freemarker" options="-parameters" />
