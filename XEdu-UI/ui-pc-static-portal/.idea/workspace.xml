@@ -3,8 +3,25 @@
   <component name="ChangeListManager">
     <list default="true" id="cd6f70ef-b367-4dc1-9ab3-a4972a9c1ce4" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/../../XEdu-Server/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../XEdu-Server/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../XEdu-Server/service-api/src/main/java/com/xedu/api/auth/AuthControllerApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../XEdu-Server/service-api/src/main/java/com/xedu/api/auth/AuthControllerApi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../XEdu-Server/service-ucenter-auth/src/main/java/com/xedu/auth/config/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../XEdu-Server/service-ucenter-auth/src/main/java/com/xedu/auth/config/WebSecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../XEdu-Server/service-ucenter-auth/src/main/java/com/xedu/auth/controller/AuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../XEdu-Server/service-ucenter-auth/src/main/java/com/xedu/auth/controller/AuthController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../XEdu-Server/service-ucenter-auth/src/main/java/com/xedu/auth/service/AuthService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../XEdu-Server/service-ucenter-auth/src/main/java/com/xedu/auth/service/AuthService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../XEdu-Server/service-ucenter-auth/target/classes/com/xedu/auth/controller/AuthController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../XEdu-Server/service-ucenter-auth/target/classes/com/xedu/auth/controller/AuthController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../XEdu-Server/service-ucenter-auth/target/classes/com/xedu/auth/service/AuthService$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../XEdu-Server/service-ucenter-auth/target/classes/com/xedu/auth/service/AuthService$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../XEdu-Server/service-ucenter-auth/target/classes/com/xedu/auth/service/AuthService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../XEdu-Server/service-ucenter-auth/target/classes/com/xedu/auth/service/AuthService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ui-pc-leanring/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../ui-pc-leanring/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ui-pc-leanring/src/base/components/foot.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../ui-pc-leanring/src/base/components/foot.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ui-pc-leanring/src/base/components/head.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../ui-pc-leanring/src/base/components/head.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ui-pc-leanring/src/base/components/loginForm.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../ui-pc-leanring/src/base/components/loginForm.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ui-pc-leanring/src/module/course/page/course_list.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../ui-pc-leanring/src/module/course/page/course_list.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ui-pc-leanring/src/module/course/page/learning_video.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../ui-pc-leanring/src/module/course/page/learning_video.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ui-pc-leanring/src/module/course/page/learning_video_backup.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../ui-pc-leanring/src/module/course/page/learning_video_backup.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ui-pc-leanring/src/module/home/page/denied.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../ui-pc-leanring/src/module/home/page/denied.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ui-pc-leanring/src/module/home/page/logout.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../ui-pc-leanring/src/module/home/page/logout.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ui-pc-leanring/static/images/asset-logoIco.png" beforeDir="false" afterPath="$PROJECT_DIR$/../ui-pc-leanring/static/images/asset-logoIco.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/video.html" beforeDir="false" afterPath="$PROJECT_DIR$/video.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/include/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/include/header.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,43 +39,6 @@
       </list>
     </option>
   </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>picker</find>
-      <find>upload</find>
-      <find>fileList</find>
-      <find>uploadFile</find>
-      <find>fileMd5</find>
-      <find>alert(</find>
-      <find>uploader</find>
-      <find>上传文件失败，请刷新页面重试</find>
-      <find>loginFormVisible</find>
-      <find>login</find>
-      <find>user.</find>
-      <find>getActiveUser</find>
-      <find>checkActiveUser</find>
-      <find>logout</find>
-      <find>getUserSession</find>
-      <find>user</find>
-      <find>getUserInfoFromJwt</find>
-      <find>欢迎</find>
-      <find>setUserSession</find>
-      <find>learnstatus</find>
-      <find>queryCompanyStat</find>
-      <find>showlogin</find>
-      <find>delUserSession</find>
-      <find>createOrder</find>
-      <find>getLearnstatus</find>
-      <find>popup-box</find>
-      <find>headVm</find>
-      <find>buy</find>
-      <find>Message</find>
-      <find>#include</find>
-    </findStrings>
-    <dirStrings>
-      <dir>F:\eduprojects\xc-edu-snapshotv1.0\xc-ui-pc-static-portal</dir>
-    </dirStrings>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
@@ -74,7 +54,6 @@
   </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
@@ -82,10 +61,12 @@
     <property name="HbShouldOpenHtmlAsHb" value="" />
     <property name="JavaScriptPreferStrict" value="false" />
     <property name="JavaScriptWeakerCompletionTypeGuess" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/img" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -176,6 +157,8 @@
       <workItem from="1584275529306" duration="1435000" />
       <workItem from="1586058844954" duration="1198000" />
       <workItem from="1588482042842" duration="1066000" />
+      <workItem from="1591873935338" duration="710000" />
+      <workItem from="1591880100165" duration="2357000" />
     </task>
     <servers />
   </component>
@@ -189,7 +172,7 @@
     </todo-panel>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="2" />
   </component>
   <component name="WindowStateProjectService">
     <state x="320" y="36" key="#HTTP_Proxy" timestamp="1583640066523">

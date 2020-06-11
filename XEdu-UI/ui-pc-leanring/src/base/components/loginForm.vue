@@ -93,7 +93,7 @@ export default {
                     window.location.href = this.returnUrl;
                   }else{
                     //跳转到首页
-                    window.location.href = 'http://www.xuecheng.com/'
+                    window.location.href = 'http://www.xedu.com/'
                   }
 
                 }else{

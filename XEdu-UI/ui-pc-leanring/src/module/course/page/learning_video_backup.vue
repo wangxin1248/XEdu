@@ -629,8 +629,8 @@
            }
       })
       //播放测试
-//      this.playvideo("http://video.xuecheng.com/video/lucene.m3u8")
-//      this.playvideo("http://video.xuecheng.com/video/5/3/53ac4cca3ddf386c21f4f1cbb4dc9876/hls/53ac4cca3ddf386c21f4f1cbb4dc9876.m3u8")
+//      this.playvideo("http://video.xedu.com/video/lucene.m3u8")
+//      this.playvideo("http://video.xedu.com/video/5/3/53ac4cca3ddf386c21f4f1cbb4dc9876/hls/53ac4cca3ddf386c21f4f1cbb4dc9876.m3u8")
     },
     mounted() {
 

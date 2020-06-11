@@ -49,7 +49,7 @@
             <div class="parting"></div>
             <div class="butItem text-center">
               <router-link :to="'/learning/'+course.courseId+'/0'" class="golearing"  target="_blank">继续学习</router-link>
-              <!--<a :href="'http://www.xuecheng.com/course/learning/'+course.courseId" class="golearing" target="_blank">继续学习</a> -->
+              <!--<a :href="'http://www.xedu.com/course/learning/'+course.courseId" class="golearing" target="_blank">继续学习</a> -->
               <a href="#" class="classcom">课程评价</a></div>
           </div>
         </div>

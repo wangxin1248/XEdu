@@ -20,8 +20,8 @@ class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     public void configure(WebSecurity web) throws Exception {
         // Spring security 忽略如下的访问，不进行验证
         web.ignoring().antMatchers("/userlogin","/userlogout","/userjwt");
-
     }
+
     @Bean
     @Override
     public AuthenticationManager authenticationManagerBean() throws Exception {

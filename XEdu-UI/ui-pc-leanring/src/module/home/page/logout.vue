@@ -6,7 +6,7 @@
         <p class="title" v-if="logoutsuccess">退出成功！</p>
         <p class="title" v-if="!logoutsuccess">退出失败，请尝试刷新页面重新操作！</p>
         <!--<p class="info"></p>-->
-        <p class="button"><a href="http://www.xuecheng.com" class="active">返回首页</a><router-link :to="{path: '/login'}">重新登陆</router-link></p>
+        <p class="button"><a href="http://www.xedu.com" class="active">返回首页</a><router-link :to="{path: '/login'}">重新登陆</router-link></p>
       </div>
    <p-foot></p-foot>
   </div>

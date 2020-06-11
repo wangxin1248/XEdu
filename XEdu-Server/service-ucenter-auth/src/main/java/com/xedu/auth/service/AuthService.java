@@ -18,6 +18,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.util.Base64Utils;
 import org.springframework.util.LinkedMultiValueMap;
 import org.springframework.util.MultiValueMap;
+import org.springframework.util.StringUtils;
 import org.springframework.web.client.DefaultResponseErrorHandler;
 import org.springframework.web.client.RestTemplate;
 
@@ -101,6 +102,19 @@ public class AuthService {
         Long expire = stringRedisTemplate.getExpire(key, TimeUnit.SECONDS);
         // 大于0则保存成功
         return expire>0;
+    }
+
+    /**
+     * 从redis中删除令牌信息
+     * @param access_token 用户身份令牌
+     * @return 是否删除成功
+     */
+    public boolean deleteToken(String access_token){
+        // 保存的key
+        String key = "user_token:"+access_token;
+        // 直接删除cookie，删除失败表示不存在则就已经退出了
+        stringRedisTemplate.delete(key);
+        return true;
     }
 
     /**
@@ -190,5 +204,32 @@ public class AuthService {
         byte[] encode = Base64Utils.encode(result.getBytes());
         // 将结果拼装为指定的样式返回
         return "Basic " + new String(encode);
+    }
+
+    /**
+     * 根据用户的身份令牌来查询对应的jwt
+     * @param token
+     * @return
+     */
+    public AuthToken getUserToken(String token) {
+        // 判断用户的身份令牌是否存在
+        if(StringUtils.isEmpty(token)){
+            return null;
+        }
+        // 保存的key
+        String key = "user_token:"+token;
+        // 从redis中进行查询
+        String value = stringRedisTemplate.opsForValue().get(key);
+        if(!StringUtils.isEmpty(value)){
+            AuthToken authToken = null;
+            try{
+                // 将获取到的jwt字符串转为对象
+                authToken = JSON.parseObject(value,AuthToken.class);
+            } catch (Exception e){
+                e.printStackTrace();
+            }
+            return authToken;
+        }
+        return null;
     }
 }

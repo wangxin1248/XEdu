@@ -5,7 +5,7 @@
       <!--<p class="ico"><img src="/static/images/page-success.png" alt=""></p>-->
       <p class="title" >对不起，您没有此操作的访问权限！</p>
       <!--<p class="info"></p>-->
-      <p class="button"><a href="http://www.xuecheng.com" class="active">返回首页</a><router-link :to="{path: '/login',query: {returnUrl: this.returnUrl}}">重新登陆</router-link></p>
+      <p class="button"><a href="http://www.xedu.com" class="active">返回首页</a><router-link :to="{path: '/login',query: {returnUrl: this.returnUrl}}">重新登陆</router-link></p>
     </div>
 
     <p-foot></p-foot>

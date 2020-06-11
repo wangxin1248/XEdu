@@ -636,7 +636,7 @@
     mounted() {
       //播放测试
       // this.playvideo("http://video.xedu.com/video/hls/lucene.m3u8")
-//      this.playvideo("http://video.xuecheng.com/video/5/3/53ac4cca3ddf386c21f4f1cbb4dc9876/hls/53ac4cca3ddf386c21f4f1cbb4dc9876.m3u8")
+//      this.playvideo("http://video.xedu.com/video/5/3/53ac4cca3ddf386c21f4f1cbb4dc9876/hls/53ac4cca3ddf386c21f4f1cbb4dc9876.m3u8")
       $(function() {
         $('.active-box span').click(function() {
           $(this).css({
