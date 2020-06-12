@@ -7,6 +7,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="govern-gateway" />
         <module name="service-manage-cms-client" />
         <module name="service-manage-cms" />
         <module name="service-manage-media-processor" />
@@ -34,6 +35,7 @@
       <module name="framework-parent" target="1.8" />
       <module name="framework-utils" target="1.8" />
       <module name="govern-center" target="1.8" />
+      <module name="govern-gateway" target="1.8" />
       <module name="service-api" target="1.8" />
       <module name="service-base-ﬁlesystem" target="1.8" />
       <module name="service-learning" target="1.8" />
@@ -58,6 +60,7 @@
       <module name="framework-model" options="-parameters" />
       <module name="framework-utils" options="-parameters" />
       <module name="govern-center" options="-parameters" />
+      <module name="govern-gateway" options="-parameters" />
       <module name="service-api" options="-parameters" />
       <module name="service-base-ﬁlesystem" options="-parameters" />
       <module name="service-learning" options="-parameters" />

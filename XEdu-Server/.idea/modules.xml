@@ -8,6 +8,7 @@
       <module fileurl="file://$PROJECT_DIR$/framework-parent/framework-parent.iml" filepath="$PROJECT_DIR$/framework-parent/framework-parent.iml" />
       <module fileurl="file://$PROJECT_DIR$/framework-utils/framework-utils.iml" filepath="$PROJECT_DIR$/framework-utils/framework-utils.iml" />
       <module fileurl="file://$PROJECT_DIR$/govern-center/govern-center.iml" filepath="$PROJECT_DIR$/govern-center/govern-center.iml" />
+      <module fileurl="file://$PROJECT_DIR$/govern-gateway/govern-gateway.iml" filepath="$PROJECT_DIR$/govern-gateway/govern-gateway.iml" />
       <module fileurl="file://$PROJECT_DIR$/service-api/service-api.iml" filepath="$PROJECT_DIR$/service-api/service-api.iml" />
       <module fileurl="file://$PROJECT_DIR$/service-base-ﬁlesystem/service-base-ﬁlesystem.iml" filepath="$PROJECT_DIR$/service-base-ﬁlesystem/service-base-ﬁlesystem.iml" />
       <module fileurl="file://$PROJECT_DIR$/service-learning/service-learning.iml" filepath="$PROJECT_DIR$/service-learning/service-learning.iml" />

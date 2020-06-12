@@ -23,6 +23,7 @@
         <module>../service-learning</module>
         <module>../service-ucenter-auth</module>
         <module>../service-ucenter</module>
+        <module>../govern-gateway</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
