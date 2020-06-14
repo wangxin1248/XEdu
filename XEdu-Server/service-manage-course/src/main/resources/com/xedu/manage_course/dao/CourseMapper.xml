@@ -9,6 +9,6 @@
     <!--查找课程列表-->
     <select id="findCourseListPage" parameterType="com.xedu.framework.domain.course.request.CourseListRequest"
             resultType="com.xedu.framework.domain.course.ext.CourseInfo">
-        select base.*,pic.pic from course_base  base left join course_pic pic on base.id=pic.courseid
+        select base.*,pic.pic from course_base  base left join course_pic pic on base.id=pic.courseid where company_id = #{companyId}
     </select>
 </mapper>

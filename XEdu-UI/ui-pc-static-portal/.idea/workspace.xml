@@ -3,25 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="cd6f70ef-b367-4dc1-9ab3-a4972a9c1ce4" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/../../XEdu-Server/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../XEdu-Server/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../XEdu-Server/service-api/src/main/java/com/xedu/api/auth/AuthControllerApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../XEdu-Server/service-api/src/main/java/com/xedu/api/auth/AuthControllerApi.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../XEdu-Server/service-ucenter-auth/src/main/java/com/xedu/auth/config/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../XEdu-Server/service-ucenter-auth/src/main/java/com/xedu/auth/config/WebSecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../XEdu-Server/service-ucenter-auth/src/main/java/com/xedu/auth/controller/AuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../XEdu-Server/service-ucenter-auth/src/main/java/com/xedu/auth/controller/AuthController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../XEdu-Server/service-ucenter-auth/src/main/java/com/xedu/auth/service/AuthService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../XEdu-Server/service-ucenter-auth/src/main/java/com/xedu/auth/service/AuthService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../XEdu-Server/service-ucenter-auth/target/classes/com/xedu/auth/controller/AuthController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../XEdu-Server/service-ucenter-auth/target/classes/com/xedu/auth/controller/AuthController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../XEdu-Server/service-ucenter-auth/target/classes/com/xedu/auth/service/AuthService$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../XEdu-Server/service-ucenter-auth/target/classes/com/xedu/auth/service/AuthService$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../XEdu-Server/service-ucenter-auth/target/classes/com/xedu/auth/service/AuthService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../XEdu-Server/service-ucenter-auth/target/classes/com/xedu/auth/service/AuthService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ui-pc-leanring/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../ui-pc-leanring/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ui-pc-leanring/src/base/components/foot.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../ui-pc-leanring/src/base/components/foot.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ui-pc-leanring/src/base/components/head.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../ui-pc-leanring/src/base/components/head.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ui-pc-leanring/src/base/components/loginForm.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../ui-pc-leanring/src/base/components/loginForm.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ui-pc-leanring/src/module/course/page/course_list.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../ui-pc-leanring/src/module/course/page/course_list.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ui-pc-leanring/src/module/course/page/learning_video.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../ui-pc-leanring/src/module/course/page/learning_video.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ui-pc-leanring/src/module/course/page/learning_video_backup.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../ui-pc-leanring/src/module/course/page/learning_video_backup.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ui-pc-leanring/src/module/home/page/denied.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../ui-pc-leanring/src/module/home/page/denied.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ui-pc-leanring/src/module/home/page/logout.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../ui-pc-leanring/src/module/home/page/logout.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ui-pc-leanring/static/images/asset-logoIco.png" beforeDir="false" afterPath="$PROJECT_DIR$/../ui-pc-leanring/static/images/asset-logoIco.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/include/header.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../XEdu-Server/framework-common/src/main/java/com/xedu/framework/exception/ExceptionCatch.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../XEdu-Server/framework-common/src/main/java/com/xedu/framework/exception/ExceptionCatch.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../XEdu-Server/service-manage-course/src/main/java/com/xedu/manage_course/controller/CourseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../XEdu-Server/service-manage-course/src/main/java/com/xedu/manage_course/controller/CourseController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../XEdu-Server/service-ucenter-auth/src/main/java/com/xedu/auth/service/UserDetailsServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../XEdu-Server/service-ucenter-auth/src/main/java/com/xedu/auth/service/UserDetailsServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -159,6 +143,7 @@
       <workItem from="1588482042842" duration="1066000" />
       <workItem from="1591873935338" duration="710000" />
       <workItem from="1591880100165" duration="2357000" />
+      <workItem from="1592045197136" duration="531000" />
     </task>
     <servers />
   </component>

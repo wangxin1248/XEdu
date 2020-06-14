@@ -57,17 +57,22 @@ public class UserDetailsServiceImpl implements UserDetailsService {
         if(userext == null){
             return null;
         }
-        // TODO:用户授权未完成，这里使用静态权限数据
-        userext.setPermissions(new ArrayList<XcMenu>());
+        // 用户授权测试
+//        userext.setPermissions(new ArrayList<XcMenu>());
         // 取出正确密码（hash值）
         String password = userext.getPassword();
 
-        //从数据库获取权限
+        // 从数据库获取权限
         List<XcMenu> permissions = userext.getPermissions();
+        // 假如用户没有权限则创建一个空对象
+        if(permissions == null){
+            permissions = new ArrayList<>();
+        }
         List<String> user_permission = new ArrayList<>();
         permissions.forEach(item-> user_permission.add(item.getCode()));
+        // 使用静态的权限表示用户所拥有的权限
 //        user_permission.add("course_get_baseinfo");
-//        user_permission.add("course_find_pic");
+//        user_permission.add("course_pic_list");
         String user_permission_string  = StringUtils.join(user_permission.toArray(), ",");
         // 构建 UserJwt 对象
         UserJwt userDetails = new UserJwt(username,

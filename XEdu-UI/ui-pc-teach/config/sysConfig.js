@@ -4,7 +4,7 @@ var sysConfig = {
     xcApiUrl: 'http://api.xedu.com',
     imgUrl:'http://img.xedu.com/',
     videoUrl:'http://video.xedu.com',
-    openAuthenticate:false,
+    openAuthenticate:true,
     openAuthorize:false
 }
 

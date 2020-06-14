@@ -22,9 +22,9 @@ public class ExceptionCatch {
     // log记录
     private static final Logger LOGGER = LoggerFactory.getLogger(ExceptionCatch.class);
 
-    //使用EXCEPTIONS存放异常类型和错误代码的映射，ImmutableMap的特点的一旦创建不可改变，并且线程安全
+    // 使用EXCEPTIONS存放异常类型和错误代码的映射，ImmutableMap的特点的一旦创建不可改变，并且线程安全
     private static ImmutableMap<Class<? extends Throwable>,ResultCode> EXCEPTIONS;
-    //使用builder来构建一个异常类型和错误代码的异常
+    // 使用builder来构建一个异常类型和错误代码的异常
     protected static ImmutableMap.Builder<Class<? extends Throwable>,ResultCode> builder = ImmutableMap.builder();
 
     static{

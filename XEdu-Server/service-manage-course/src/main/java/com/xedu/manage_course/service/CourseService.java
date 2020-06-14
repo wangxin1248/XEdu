@@ -170,7 +170,7 @@ public class CourseService {
      * @param courseListRequest 查询条件
      * @return 课程分页对象
      */
-    public QueryResponseResult<CourseInfo> findCourseListPage(int page, int size, CourseListRequest courseListRequest){
+    public QueryResponseResult<CourseInfo> findCourseListPage(String companyId, int page, int size, CourseListRequest courseListRequest){
         if(courseListRequest == null){
             // 查询条件为null则默认为空
             courseListRequest = new CourseListRequest();
@@ -184,6 +184,8 @@ public class CourseService {
         }
         // 设置分页查询条件
         PageHelper.startPage(page,size);
+        // 将公司id设置到CourseListRequest对象中
+        courseListRequest.setCompanyId(companyId);
         // 执行查询操作
         Page<CourseInfo> courseInfoList = courseMapper.findCourseListPage(courseListRequest);
         // 获取课程列表

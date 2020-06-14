@@ -1,16 +1,20 @@
 package com.xedu.ucenter.service;
 
 import com.xedu.framework.domain.ucenter.XcCompanyUser;
+import com.xedu.framework.domain.ucenter.XcMenu;
 import com.xedu.framework.domain.ucenter.XcUser;
 import com.xedu.framework.domain.ucenter.ext.XcUserExt;
 import com.xedu.framework.exception.ExceptionCast;
 import com.xedu.framework.model.response.CommonCode;
 import com.xedu.ucenter.dao.XcCompanyUserRepository;
+import com.xedu.ucenter.dao.XcMenuMapper;
 import com.xedu.ucenter.dao.XcUserRepository;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 /**
  * @Author: Xin Wang.
@@ -26,6 +30,8 @@ public class UserService {
     XcUserRepository xcUserRepository;
     @Autowired
     XcCompanyUserRepository xcCompanyUserRepository;
+    @Autowired
+    XcMenuMapper xcMenuMapper;
 
     /**
      * 根据用户账号获取用户的扩展信息
@@ -46,7 +52,11 @@ public class UserService {
             return null;
         }
         // 根据用户id查询用户所属公司信息
-        XcCompanyUser xcCompanyUser = xcCompanyUserRepository.findByUserId(xcUser.getId());
+        String userid = xcUser.getId();
+        XcCompanyUser xcCompanyUser = xcCompanyUserRepository.findByUserId(userid);
+
+        // 根据用户id查询所属权限
+        List<XcMenu> xcMenus = xcMenuMapper.selectPermissionByUserId(userid);
 
         // 构建XcUserExt对象
         XcUserExt userExt = new XcUserExt();
@@ -56,6 +66,8 @@ public class UserService {
         if(xcCompanyUser != null){
             userExt.setCompanyId(xcCompanyUser.getCompanyId());
         }
+        // 将用户权限信息保存到用户信息对象中去
+        userExt.setPermissions(xcMenus);
 
         // 返回扩展对象
         return userExt;
