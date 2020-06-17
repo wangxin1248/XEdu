@@ -14,7 +14,7 @@
     "siteName" : "课程详情页面", 
     "siteDomain" : "http://www.xedu.com", 
     "sitePort" : "80", 
-    "siteWebPath" : "/", 
+    "siteWebPath" : "", 
     "siteCreateTime" : ISODate("2018-02-03T02:34:19.113+0000"), 
     "sitePhysicalPath" : "/Users/wx/project/XEduCode/XEdu-UI/xedu/static/"
 }
